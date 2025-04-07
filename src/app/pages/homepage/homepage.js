@@ -1,5 +1,5 @@
-import Navbar from '../components/navbar/Navbar';
-import Slidebar from "../components/Slidebar";
+import Navbar from '../../../components/navbar/Navbar';
+import Slidebar from "../../../components/Slidebar";
 import Head from "next/head";
 
 
