@@ -1,5 +1,4 @@
-import Navbar from '../../../components/navbar/Navbar';
-import Slidebar from "../../../components/Slidebar";
+import Sidebar from "../components/Slidebar";
 import Head from "next/head";
 
 
@@ -14,11 +13,10 @@ const Homepage = () => (
             <meta name="keywords" content="ManavFood, Sunblu, Feray Manav"/>
             <meta name="author" content="Furkan Yener"/>
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
             <link rel="canonical" href="https://manavfood.com/"/>
         </Head>
         <main className="bg-gray-50 min-h-screen py-10">
-        <Slidebar/>
+        <Sidebar/>
         </main>
     </div>
 );
