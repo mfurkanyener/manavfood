@@ -1,5 +1,4 @@
 import Head from "next/head";
-import ProductCard from "@.../components/ProductCard";
 
 const Home = () => {
     return (
