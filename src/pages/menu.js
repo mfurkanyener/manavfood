@@ -1,4 +1,3 @@
-import {GiHamburgerMenu} from "react-icons/rx";
 
 const Menu = () => {
     return (
