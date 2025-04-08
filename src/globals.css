@@ -1,1 +1,6 @@
-@import "../node_modules/tailwindcss";
+@import 'tailwindcss';
+
+:root {
+    --color-green: 68 170 0;  /* NOT: RGB formatında, 3 sayı boşlukla */
+    --color-blue: 69 190 224;
+}

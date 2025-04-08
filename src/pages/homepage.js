@@ -1,5 +1,8 @@
 import Sidebar from "../components/Slidebar";
 import Head from "next/head";
+import Hpaboutus from "@.../components/Hpaboutus";
+import ProductsSection from "@.../components/ProductSection";
+import ContactBanner from "@.../components/ContactBanner";
 
 
 
@@ -16,7 +19,10 @@ const Homepage = () => (
             <link rel="canonical" href="https://manavfood.com/"/>
         </Head>
         <main className="bg-gray-50 min-h-screen py-10">
-        <Sidebar/>
+            <Sidebar/>
+            <Hpaboutus/>
+            <ProductsSection/>
+            <ContactBanner/>
         </main>
     </div>
 );

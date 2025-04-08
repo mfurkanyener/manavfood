@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import React from "react";
 import Head from "next/head";
 
@@ -16,7 +15,7 @@ const Products = () => {
 
         <main className="bg-gray-50 min-h-screen py-10">
             <div>
-                <h1 className="text-3xl text-center font-bold">Products</h1>
+                <h1 className="bg-blue text-3xl text-center font-bold">Products</h1>
             </div>
         </main>
         </div>
