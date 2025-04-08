@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const ContactBanner = () => {
     return (
         <section className="relative py-24 bg-white overflow-hidden">
@@ -13,12 +15,12 @@ const ContactBanner = () => {
                     Contact us to discuss how we can provide Seafood Excellence directly to you.
                 </p>
 
-                <a
+                <Link
                     href="/contact"
                     className="inline-block bg-black text-white px-6 py-3 rounded-xl text-md hover:bg-gray-900 transition"
                 >
                     Contact Us
-                </a>
+                </Link>
             </div>
         </section>
     );
