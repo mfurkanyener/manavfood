@@ -4,7 +4,7 @@ const ContactBanner = () => {
     return (
         <section className="relative py-24 bg-white overflow-hidden">
             {/* Arka plan çizgileri */}
-            <div className="absolute inset-0 bg-[url('/images/stripes.svg')] opacity-10 pointer-events-none z-0" />
+            <div className="absolute inset-0 opacity-10 pointer-events-none z-0" />
 
             {/* İçerik */}
             <div className="relative z-10 max-w-4xl mx-auto text-center px-4">

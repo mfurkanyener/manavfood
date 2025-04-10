@@ -1,10 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
+import {Button} from "@/components/ui/button";
+import * as React from "react";
 
 const ProductsSection = () => {
     return (
         <section className="bg-gradient-to-b from-white to-blue-50 py-16 relative">
-            {/* Dikine çizgiler için arka plan (isteğe bağlı) */}
-            <div className="absolute inset-0 bg-[url('/images/stripes.svg')] opacity-10 pointer-events-none z-0" />
 
             <div className="relative z-10 max-w-6xl mx-auto px-4">
                 {/* Başlık */}
@@ -15,7 +16,7 @@ const ProductsSection = () => {
                 {/* Ürün kartları */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 mb-10">
                     {/* Tomato Products */}
-                    <div className="rounded-xl overflow-hidden shadow-md relative">
+                    <div className="relative rounded-xl overflow-hidden shadow-md">
                         <Image
                             src="/images/productLinkTomato.png"
                             alt="Tomato Products"
@@ -23,13 +24,18 @@ const ProductsSection = () => {
                             height={400}
                             className="w-full h-auto object-cover"
                         />
-                        <div className="absolute bottom-4 left-4 bg-black/40 text-white px-4 py-1 rounded-full text-sm">
-                            Tomato Products
+                        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
+                            <Link href="/products">
+                                <Button
+                                    className="text-black font-bold bg-white px-5 py-3 hover:text-white rounded-full hover:bg-black transition">
+                                    Tomato Products
+                                </Button>
+                            </Link>
                         </div>
                     </div>
 
                     {/* Seafood Products */}
-                    <div className="rounded-xl overflow-hidden shadow-md relative">
+                    <div className="relative rounded-xl overflow-hidden shadow-md">
                         <Image
                             src="/images/productLinkSeafood.png"
                             alt="Seafood Products"
@@ -37,15 +43,21 @@ const ProductsSection = () => {
                             height={400}
                             className="w-full h-auto object-cover"
                         />
-                        <div className="absolute bottom-4 left-4 bg-black/40 text-white px-4 py-1 rounded-full text-sm">
-                            Seafood Products
+                        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
+                            <Link href="/products">
+                                <Button
+                                    className="text-black font-bold bg-white px-5 py-3 hover:text-white rounded-full hover:bg-black transition">
+                                    Seafood Products
+                                </Button>
+                            </Link>
                         </div>
                     </div>
                 </div>
 
                 {/* Açıklama */}
                 <p className="text-center text-xl md:text-2xl font-medium leading-relaxed">
-                    How about <span className="text-[rgb(var(--color-green))] font-semibold">discovering</span> the products<br />
+                    How about <span className="text-[rgb(var(--color-green))] font-semibold">discovering</span> the
+                    products<br/>
                     we’ve carefully selected just for you?
                 </p>
             </div>
