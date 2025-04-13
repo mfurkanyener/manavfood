@@ -40,9 +40,9 @@ const About = () => {
                     our processes.
                 </p>
                 <Link href="/about">
-                <Button className="bg-black text-white px-6 py-3 text-sm rounded-md hover:bg-gray-800">
-                    Learn More
-                </Button>
+                    <Button className="bg-black text-white px-6 py-3 text-sm rounded-md hover:bg-gray-800">
+                        Learn More
+                    </Button>
                 </Link>
             </div>
         </div>

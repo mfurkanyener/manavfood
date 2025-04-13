@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import ProductsSection from "@/components/ProductSection";
 
 const Products = () => {
     return (
@@ -13,11 +14,10 @@ const Products = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             </Head>
 
-        <main className="bg-gray-50 min-h-screen py-10">
             <div>
-                <h1 className="bg-blue text-3xl text-center font-bold">Products</h1>
+                <ProductsSection/>
             </div>
-        </main>
+
         </div>
     );
 };

@@ -26,7 +26,7 @@ const Slidebar = () => {
     ];
 
     return (
-        <div className="relative flex justify-center w-full m-0 p-0">
+        <div className="relative flex justify-center w-full m-0 p-0 py-10">
             <Carousel className="w-full max-w-7xl">
                 <CarouselContent>
                     {slides.map((slide, index) => (

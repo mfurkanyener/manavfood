@@ -25,7 +25,7 @@ const ProductsSection = () => {
                             className="w-full h-auto object-cover"
                         />
                         <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
-                            <Link href="/products">
+                            <Link href="/tomatoProducts">
                                 <Button
                                     className="text-black font-bold bg-white px-5 py-3 hover:text-white rounded-full hover:bg-black transition">
                                     Tomato Products
@@ -44,7 +44,7 @@ const ProductsSection = () => {
                             className="w-full h-auto object-cover"
                         />
                         <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
-                            <Link href="/products">
+                            <Link href="/fishProducts">
                                 <Button
                                     className="text-black font-bold bg-white px-5 py-3 hover:text-white rounded-full hover:bg-black transition">
                                     Seafood Products

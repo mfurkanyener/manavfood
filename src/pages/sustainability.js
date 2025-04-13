@@ -12,7 +12,7 @@ const Sustainability = () => {
                 <meta name="keywords" content="ManavFood, Sunblu, Feray Manav"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             </Head>
-            <main className="bg-gray-50 min-h-screen py-10">
+            <main className="bg-gray-50 min-h-screen">
                 <div>
                     <h1 className="text-3xl text-center font-bold">Sustainability</h1>
                 </div>
