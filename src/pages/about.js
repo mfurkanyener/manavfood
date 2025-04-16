@@ -101,7 +101,7 @@ const About = () => (
                     <div className="lg:w-1/2 text-left">
                         <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center lg:text-left">Portfolio</h2>
                         <p className="text-gray-800 leading-relaxed">
-                            At Manav Foreign Trade A.S., we specialize in a carefully curated selection of food items,
+                            At Manav Dış Ticaret A.Ş., we specialize in a carefully curated selection of food items,
                             including
                             Oven semi-dried tomatoes, Sun-dried tomatoes, sterilized stuffed mussels, and a variety of
                             ready-to-eat
@@ -142,7 +142,7 @@ const About = () => (
                     <div className="lg:w-1/2 text-left">
                         <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center lg:text-left">Sustainability</h2>
                         <p className="text-gray-800 leading-relaxed">
-                            At Manav Foreign Trade A.S., sustainability and innovation are at the heart of everything we
+                            At Manav Dış Ticaret A.Ş., sustainability and innovation are at the heart of everything we
                             do.
                             <br/><br/>
                             We constantly strive to improve our products and processes, ensuring that we not only meet

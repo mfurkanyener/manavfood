@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import {GiHamburgerMenu} from "react-icons/gi";
+import { usePathname } from 'next/navigation';
+import { GiHamburgerMenu } from "react-icons/gi";
 import Image from 'next/image';
 
 const navLinks = [
@@ -11,16 +12,31 @@ const navLinks = [
     { name: "Contact Us", href: "/contact" },
 ];
 
+
 const Navbar = () => {
+    const pathname = usePathname();
+
+    const isContactPage = pathname === "/contact";
+    const isMenuPage = pathname === "/menu"; // 🔸 yeni kontrol
+    if (isMenuPage) return null; // 🔸 menu sayfasında navbar'ı gösterme
+
+
+
     return (
         <nav className="flex items-center justify-between text-black py-4 px-6">
             {/* Logo */}
-            <div className="mx-auto ">
-                <Image className="logo" src="/images/sunblu.png" alt="logo" width={250} height={250}/>
+            <div className="mx-auto">
+                <Image
+                    className={`logo ${isContactPage ? "rounded-[16px]" : ""}`}
+                    src="/images/sunblu.png"
+                    alt="logo"
+                    width={250}
+                    height={250}
+                />
             </div>
+
             {/* Menü Öğeleri */}
             <div className="flex items-center gap-6 mx-auto">
-                {/* Büyük ekranlarda gösterilecek linkler */}
                 {navLinks.map((link) => (
                     <Link
                         key={link.name}
@@ -31,9 +47,10 @@ const Navbar = () => {
                     </Link>
                 ))}
 
-                {/* Küçük ekranlar için hamburger menü */}
-                <Link href="/menu" className="flex lg:hidden ml-auto">
-                    <GiHamburgerMenu size="50"/>
+                <Link href="/menu">
+                    <div className="bg-[#44AA00]  p-3 rounded-[16px] cursor-pointer">
+                        <GiHamburgerMenu size={30} color="#ffffff" />
+                    </div>
                 </Link>
             </div>
         </nav>

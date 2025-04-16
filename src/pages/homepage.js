@@ -3,6 +3,7 @@ import Slidebar from "@.../components/Slidebar";
 import AboutBanner from "@/components/AboutBanner";
 import ProductsSection from "@.../components/ProductSection";
 import ContactBanner from "@.../components/ContactBanner";
+import MarqueeBanner from "@/components/MarqueeBanner";
 
 const Homepage = () => (
     <div>
@@ -18,7 +19,10 @@ const Homepage = () => (
         </Head>
         <main className="bg-gray-50 min-h-screen">
             <Slidebar/>
+
             <AboutBanner/>
+            <MarqueeBanner/>
+
             <ProductsSection/>
             <ContactBanner/>
         </main>

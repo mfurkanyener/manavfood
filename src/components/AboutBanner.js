@@ -12,19 +12,19 @@ const imprima = Imprima({
 
 const About = () => {
     return (
-        <div className="relative w-full min-h-screen flex items-center justify-center overflow-hidden px-4 py-20">
+        <div className="relative w-full px-4 py-20 overflow-hidden">
             {/* Background image */}
             <Image
                 className="absolute inset-0 w-full h-full object-cover"
                 src="/images/topografivektor.png"
                 alt="topografivektor"
                 width={3209}
-                height={100}
+                height={50}
                 priority
             />
 
             {/* Overlay content */}
-            <div className="relative z-10 max-w-4xl text-center">
+            <div className="relative z-10 max-w-4xl mx-auto text-center">
                 <h1 className={`${imprima.className} text-xl md:text-2xl mb-2`}>manavfood</h1>
                 <h2 className="text-2xl md:text-4xl font-light text-black mb-6">
                     About <span className="text-green-600 font-bold">Us</span>

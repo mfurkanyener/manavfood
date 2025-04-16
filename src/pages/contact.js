@@ -6,6 +6,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import emailjs from '@emailjs/browser';
+import { FaMapMarkerAlt } from "react-icons/fa";
+import { HiOutlineMail } from "react-icons/hi";
 
 export default function ContactPage() {
     const [accepted, setAccepted] = useState(false);
@@ -51,11 +53,11 @@ export default function ContactPage() {
             </div>
 
             {/* Form */}
-            <div className="relative z-10 max-w-6xl mx-auto px-6 pb-20">
+            <div className="relative z-10 max-w-[1200px] w-full mx-auto pb-20">
                 <form
                     ref={formRef}
                     onSubmit={handleSubmit}
-                    className="bg-white rounded-3xl shadow-xl p-10 space-y-6"
+                    className="bg-white rounded-3xl shadow-xl p-10 space-y-6 w-full max-w-[800px] mx-auto"
                 >
                     <div className="space-y-4">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -93,21 +95,32 @@ export default function ContactPage() {
                     </div>
                 </form>
 
-                {/* Address Section */}
-                <div className="flex flex-col md:flex-row items-center justify-center gap-6 pt-6">
-                    <div className="bg-gray-100 p-4 rounded-2xl shadow-md text-center w-full md:w-1/2">
-                        <p className="font-semibold">ADDRESS</p>
-                        <p className="text-sm mt-1">
-                            Adalet Mahallesi Manas Bul. No: 12/2 Center Office<br />
-                            Bayraklı IZMIR TURKEY
-                        </p>
+                        {/* Address Section */}
+                        <div className="flex flex-col md:flex-row items-center justify-center gap-6 pt-6">
+                            {/* Address Card */}
+                            <div
+                                className="bg-white rounded-[48px] shadow-xl w-[210px] h-[210px] p-4 grid grid-rows-[48px_32px_1fr] items-center text-center"
+                            >
+                                <FaMapMarkerAlt className="text-[#45BEE0] w-8 h-8 mx-auto"/>
+                                <p className="font-bold text-base">ADDRESS</p>
+                                <p className="max-w-[210px] text-center text-sm leading-snug">
+                                    Adalet Mah. Manas Bul. No: 12/2 Center Office Bayraklı IZMIR TURKEY
+                                </p>
+                            </div>
+
+                            {/* Email Card */}
+                            <div
+                                className="bg-white rounded-[48px] shadow-xl w-[210px] h-[210px] p-4 grid grid-rows-[48px_32px_1fr] items-center text-center"
+                            >
+                                <HiOutlineMail className="text-[#45BEE0] w-8 h-8 mx-auto"/>
+                                <p className="font-bold text-base">EMAIL</p>
+                                <a href="mailto:feray@manavfood.com"
+                                   className="max-w-[210px] -mt-11 text-center text-sm leading-snug">
+                                    feray@manavfood.com
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div className="bg-gray-100 p-4 rounded-2xl shadow-md text-center w-full md:w-1/2">
-                        <p className="font-semibold">EMAIL</p>
-                        <p className="text-sm mt-1">feray@manavfood.com</p>
-                    </div>
-                </div>
-            </div>
         </div>
     );
 }

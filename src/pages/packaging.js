@@ -14,7 +14,7 @@ const Packaging = () => {
             </Head>
 
             {/* Üst Alan */}
-            <section className="relative pt-12 text-center overflow-hidden isolate">
+            <section className="relative text-center overflow-hidden isolate">
                 <div className="relative">
                     {/* Topografik Arkaplan */}
                     <div className="absolute inset-0 -z-20">
@@ -33,8 +33,7 @@ const Packaging = () => {
                             Carefully Prepared for Quality and Trust
                         </h2>
                         <p className="text-sm md:text-base text-gray-800 leading-relaxed mb-10">
-                            Kısa açıklama eklenecek...
-                        </p>
+                            Our packaging is designed to preserve quality, extend shelf life, and meet the demands of retail, industrial, and ready-to-eat markets with precision and care.                        </p>
                     </div>
                 </div>
             </section>
@@ -291,7 +290,6 @@ const Packaging = () => {
                         </div>
                     </div>
                 </div>
-
             </section>
         </div>
     );
