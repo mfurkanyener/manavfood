@@ -24,8 +24,7 @@ export default function MarqueeBanner() {
                                     alt="logo"
                                     width={50}
                                     height={50}
-                                    className="mx-4"
-                                />
+                                    className="mx-4 rounded-[10px]"                             />
                             </div>
                         ))}
                     </div>
