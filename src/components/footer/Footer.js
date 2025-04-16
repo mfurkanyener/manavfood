@@ -11,7 +11,7 @@ const Footer = () => {
     if (isMenuPage || isContactPage) return null;
 
     return (
-        <footer className={`${isTomatoPage ? "bg-[#A1D582]" : "bg-[#A1D582]"} text-white py-10`}>
+        <footer className={`${isTomatoPage ? "bg-[#A1D582]" : "bg-[#45BEE0]"} text-white py-10`}>
             <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
                 <div className="col-span-1 md:col-span-2 flex flex-col md:flex-row md:items-start md:space-x-8">
                     <div className="mb-6 md:mb-0">
