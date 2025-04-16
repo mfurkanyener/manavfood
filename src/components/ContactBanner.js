@@ -12,7 +12,7 @@ const ContactBanner = () => {
                     Get in touch <span className="text-[rgb(var(--color-green))] font-semibold">with us</span>
                 </h2>
                 <p className="text-md md:text-lg font-medium mb-8">
-                    Contact us to discuss how we can provide Seafood Excellence directly to you.
+                    Reach out to explore how ManavFood can deliver premium Mediterranean flavors—right to your table.
                 </p>
 
                 <Link
