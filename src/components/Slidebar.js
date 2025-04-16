@@ -50,7 +50,7 @@ const Slidebar = () => {
                                                     {slide.subtitle}
                                                 </h2>
                                                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                                                    <Link href="/products">
+                                                    <Link href="/tomatoProducts">
                                                     <Button
                                                         variant="outline"
                                                         className="text-white font-bold bg-black bg-opacity-50 px-5 py-3 rounded-lg hover:bg-opacity-70 transition"
@@ -58,7 +58,7 @@ const Slidebar = () => {
                                                         Tomato Products
                                                     </Button>
                                                     </Link>
-                                                    <Link href="/products">
+                                                    <Link href="/fishProducts">
                                                     <Button className="text-black font-bold bg-white px-5 py-3 rounded-lg hover:text-white hover:bg-black transition">
                                                         Seafood Products
                                                     </Button>
