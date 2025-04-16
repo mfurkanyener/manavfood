@@ -32,20 +32,27 @@ const Sustainability = () => {
                         </h3>
                         <h2 className="text-2xl md:text-4xl font-light text-black mb-6">Naturally Responsible</h2>
                         <p className="text-sm md:text-base text-gray-800 leading-relaxed mb-10">
-                            At ManavFood, we believe sustainability is more than a commitment — it’s our shared responsibility.
-                            From sourcing to packaging, every step is guided by respect for nature, support for local farmers, and the pursuit of long-term ecological balance.
+                            At ManavFood, we believe sustainability is more than a commitment — it’s our shared
+                            responsibility.
+                            From sourcing to packaging, every step is guided by respect for nature, support for local
+                            farmers, and the pursuit of long-term ecological balance.
                         </p>
-                    </div>
-                    <div>
-                        <div>
-
+                        <div className="px-4 py-8">
+                            <h1 className="text-lg font-semibold mb-4">Certified by |</h1>
+                            <div className="flex flex-wrap items-center gap-6">
+                                <Image src="/images/brc.png" alt="brc logo" width={100} height={100}/>
+                                <Image src="/images/sedex.jpg" alt="sedex logo" width={100} height={100}/>
+                                <Image src="/images/iso.jpeg" alt="iso logo" width={100} height={100}/>
+                                <Image src="/images/ifs.png" alt="ifs logo" width={100} height={100}/>
+                                <Image src="/images/golabalGap.jpg" alt="globalgap logo" width={100} height={100}/>
+                            </div>
                         </div>
-
                     </div>
+
                 </section>
             </section>
         </div>
-);
+    );
 };
 
 export default Sustainability;
