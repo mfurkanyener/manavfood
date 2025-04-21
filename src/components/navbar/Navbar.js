@@ -23,21 +23,22 @@ const Navbar = () => {
 
 
     return (
-        <nav className="flex items-center justify-between text-black py-4 px-6">
+        <nav className="w-full max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-4">
             {/* Logo */}
-            <div className="mx-auto w-[100px] h-[100px] sm:w-[150px] sm:h-[150px] md:w-[200px] md:h-[200px] lg:w-[250px] lg:h-[250px] relative">
+            <div
+                className="relative w-[100px] h-[100px] sm:w-[150px] sm:h-[150px] md:w-[200px] md:h-[200px] lg:w-[250px] lg:h-[250px]">
                 <Link href="/homepage">
-                <Image
-                    className={`logo ${isContactPage ? "rounded-[16px]" : ""} object-contain`}
-                    src="/images/logo/sunblu.png"
-                    alt="logo"
-                    fill
-                />
+                    <Image
+                        className={`logo ${isContactPage ? "rounded-[16px]" : ""} object-contain`}
+                        src="/images/logo/sunblu.png"
+                        alt="logo"
+                        fill
+                    />
                 </Link>
             </div>
 
             {/* Menü Öğeleri */}
-            <div className="flex items-center gap-6 mx-auto">
+            <div className="flex items-center gap-6">
                 {navLinks.map((link) => (
                     <Link
                         key={link.name}
