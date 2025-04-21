@@ -18,7 +18,7 @@ export default function TomatoProducts() {
 
                 {/* Sol İkon */}
                 <Image
-                    src="/images/iconTomato.png"
+                    src="/images/tomatoImg/iconTomato.png"
                     alt="leftIcon"
                     width={200}
                     height={200}
@@ -27,7 +27,7 @@ export default function TomatoProducts() {
 
                 {/* Sağ İkon */}
                 <Image
-                    src="/images/iconTomato2.png"
+                    src="/images/tomatoImg/iconTomato2.png"
                     alt="rightIcon"
                     width={200}
                     height={200}
@@ -46,7 +46,7 @@ export default function TomatoProducts() {
                     {/* Alt Ortadaki İkon */}
                     <div className="absolute left-1/2 transform -translate-x-1/2 bottom-[-60px] z-10">
                         <Image
-                            src="/images/iconTomato2.png"
+                            src="/images/tomatoImg/iconTomato2.png"
                             alt="centeredTomatoIcon"
                             width={160}
                             height={160}
@@ -62,7 +62,7 @@ export default function TomatoProducts() {
                 {/* TomatoBG Arka Plan */}
                 <div className="absolute inset-0 z-10">
                     <Image
-                        src="/images/tomatobg.png"
+                        src="/images/tomatoImg/tomatobg.png"
                         alt="tomato background"
                         fill
                         className="object-cover z-30"
@@ -82,7 +82,7 @@ export default function TomatoProducts() {
                             </p>
                         </div>
                         <Image
-                            src="/images/ovenSemiDiredPhoto.png"
+                            src="/images/tomatoImg/ovenSemiDiredPhoto.png"
                             alt="Oven Semi Dried"
                             width={603}
                             height={603}
@@ -99,7 +99,7 @@ export default function TomatoProducts() {
                             </p>
                         </div>
                         <Image
-                            src="/images/sunDiredPhoto.png"
+                            src="/images/tomatoImg/sunDiredPhoto.png"
                             alt="Sun Dried"
                             width={603}
                             height={603}
@@ -116,7 +116,7 @@ export default function TomatoProducts() {
                             </p>
                         </div>
                         <Image
-                            src="/images/organicSunDiredPhoto.png"
+                            src="/images/tomatoImg/organicSunDiredPhoto.jpeg"
                             alt="Organic Sun Dried"
                             width={603}
                             height={603}

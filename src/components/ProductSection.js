@@ -18,7 +18,7 @@ const ProductsSection = () => {
                     {/* Tomato Products */}
                     <div className="relative rounded-xl overflow-hidden shadow-md">
                         <Image
-                            src="/images/productLinkTomato.png"
+                            src="/images/tomatoImg/productLinkTomato.png"
                             alt="Tomato Products"
                             width={600}
                             height={400}
@@ -37,7 +37,7 @@ const ProductsSection = () => {
                     {/* Seafood Products */}
                     <div className="relative rounded-xl overflow-hidden shadow-md">
                         <Image
-                            src="/images/productLinkSeafood.png"
+                            src="/images/fishImg/productLinkSeafood.png"
                             alt="Seafood Products"
                             width={600}
                             height={400}

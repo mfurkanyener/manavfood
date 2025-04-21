@@ -9,7 +9,7 @@ const Menu = () => {
                 {/* Left Side: Image */}
                 <div className="relative w-full lg:w-1/2 h-96 lg:h-auto">
                     <Image
-                        src="/images/menuPhoho.png" // Görselini /public/images altına koy
+                        src="/images/menu/menuPhoho.png" // Görselini /public/images altına koy
                         alt="Mussels Dish"
                         fill
                         className="object-cover"

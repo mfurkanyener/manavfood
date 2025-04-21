@@ -7,7 +7,7 @@ const Packaging = () => {
         <div className="relative w-full min-h-screen overflow-hidden">
             <Head>
                 <title>Packaging</title>
-                <link rel="icon" href="/sunblu.ico"/>
+                <link rel="icon" href="/images/logo/sunblu.ico"/>
                 <meta charSet="UTF-8"/>
                 <meta name="keywords" content="ManavFood, Sunblu, Feray Manav"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -42,7 +42,7 @@ const Packaging = () => {
             <section className="relative w-full overflow-hidden text-center z-30">
                 <div className="absolute inset-0 z-10">
                     <Image
-                        src="/images/packacgingBg.png"
+                        src="/images/packaging/packacgingBg.png"
                         alt="Packaging"
                         fill
                         className="object-cover"
@@ -67,7 +67,7 @@ const Packaging = () => {
                         {/* Görsel */}
                         <div className="flex-shrink-0">
                             <Image
-                                src="/images/readyToEat.png"
+                                src="/images/packaging/readyToEat.png"
                                 alt="Ready to Eat Vacuum Bags"
                                 width={500}
                                 height={300}
@@ -151,7 +151,7 @@ const Packaging = () => {
                         {/* Görsel */}
                         <div className="flex-shrink-0">
                             <Image
-                                src="/images/retail.png"
+                                src="/images/packaging/retail.png"
                                 alt="Retail Jars"
                                 width={500}
                                 height={300}
@@ -176,7 +176,7 @@ const Packaging = () => {
                         {/* Görsel */}
                         <div className="flex-shrink-0">
                             <Image
-                                src="/images/industrialDired.png"
+                                src="/images/packaging/industrialDired.png"
                                 alt="Industrial Dried Tomatoes"
                                 width={500}
                                 height={300}
@@ -242,7 +242,7 @@ const Packaging = () => {
                         {/* Sağ taraf - Görsel */}
                         <div className="flex gap-6 justify-center items-center">
                             <Image
-                                src="/images/mussels.png"
+                                src="/images/packaging/mussels.png"
                                 alt="Blue Mussel Bag"
                                 width={240}
                                 height={300}
@@ -281,7 +281,7 @@ const Packaging = () => {
 
                         <div className="flex gap-6 justify-center items-center">
                             <Image
-                                src="/images/mussels.png"
+                                src="/images/packaging/mussels.png"
                                 alt="Blue Mussel Bag"
                                 width={240}
                                 height={300}

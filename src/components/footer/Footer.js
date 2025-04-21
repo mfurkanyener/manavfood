@@ -16,13 +16,13 @@ const Footer = () => {
                 <div className="col-span-1 md:col-span-2 flex flex-col md:flex-row md:items-start md:space-x-8">
                     <div className="mb-6 md:mb-0">
                         <Image
-                            src="/images/sunblu.png"
+                            src="/images/logo/sunblu.png"
                             alt="sunblu logo"
                             width={100}
                             height={100}
                             className="mb-4 rounded-xl"
                         />
-                        <p className="font-bold text-lg space-y-3 mb-4">MANAVFOOD</p>
+                        <p className="font-bold text-lg space-y-3 mb-4">MANAVFOOD DIŞ TİCARET A.Ş.</p>
                         <div className="flex items-center">
                             <p className="w-20 font-semibold">E-MAIL</p>
                             <a href="mailto:feray@manavfood.com" className="ml-12 mt-1 text-white hover:underline block">

@@ -37,7 +37,7 @@ export default function ContactPage() {
             {/* Background */}
             <div className="fixed top-0 left-0 w-full h-full -z-10">
                 <Image
-                    src="/images/contactSubstract.png"
+                    src="/images/contact/contactSubstract.png"
                     alt="background"
                     fill
                     className="object-cover"
@@ -79,9 +79,8 @@ export default function ContactPage() {
                             <Label htmlFor="privacy" className="text-sm text-black">
                                 I have read and accept the{" "}
                                 <a href="#" className="underline">
-                                    Privacy Policy
+                                    Privacy Policy.
                                 </a>
-                                .
                             </Label>
                         </div>
 
@@ -114,8 +113,11 @@ export default function ContactPage() {
                             >
                                 <HiOutlineMail className="text-[#45BEE0] w-8 h-8 mx-auto"/>
                                 <p className="font-bold text-base">EMAIL</p>
-                                <a href="mailto:feray@manavfood.com"
-                                   className="max-w-[210px] -mt-11 text-center text-sm leading-snug">
+                                <p className="max-w-[210px] text-center text-sm leading-snug">MANAVFOOD DIŞ TİCARET A.Ş.</p>
+                                <a
+                                    href="mailto:feray@manavfood.com"
+                                    className="text-sm text-[#333] underline hover:text-[#45BEE0] transition"
+                                >
                                     feray@manavfood.com
                                 </a>
                             </div>

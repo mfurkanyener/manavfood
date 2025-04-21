@@ -14,12 +14,12 @@ import Link from "next/link";
 const Slidebar = () => {
     const slides = [
         {
-            image: "/images/slide1.png",
+            image: "/images/slide/slide1.png",
             title: "Ready To Eat",
             subtitle: "Seafood Solutions",
         },
         {
-            image: "/images/slide2.png",
+            image: "/images/slide/slide2.png",
             title: "Food Service",
             subtitle: "and Retail Solutions",
         },

@@ -7,7 +7,7 @@ const FishProducts = () => {
         <div className="relative w-full min-h-screen overflow-hidden">
             <Head>
                 <title>Fish Products</title>
-                <link rel="icon" href="/sunblu.ico"/>
+                <link rel="icon" href="/images/logo/sunblu.ico"/>
                 <meta charSet="UTF-8"/>
                 <meta name="keywords" content="ManavFood, Sunblu, Feray Manav"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -28,7 +28,7 @@ const FishProducts = () => {
 
                 {/* Left icon */}
                 <Image
-                    src="/images/iconFish.png"
+                    src="/images/fishImg/iconFish.png"
                     alt="leftIcon"
                     width={200}
                     height={200}
@@ -37,7 +37,7 @@ const FishProducts = () => {
 
                 {/* Right icon */}
                 <Image
-                    src="/images/iconFish2.png"
+                    src="/images/fishImg/iconFish2.png"
                     alt="iconFish2"
                     width={200}
                     height={200}
@@ -69,7 +69,7 @@ const FishProducts = () => {
                 <div className="absolute inset-0 z-10">
 
                     <Image
-                        src="/images/fishbg.png"
+                        src="/images/fishImg/fishbg.png"
                         alt="fish background"
                         fill
                         className="object-cover"
@@ -143,7 +143,7 @@ const FishProducts = () => {
                             </div>
                         </div>
                         <Image
-                            src="/images/SeaBreamFillets.png"
+                            src="/images/fishImg/SeaBreamFillets.png"
                             alt="Sea Bream Fillets"
                             width={603}
                             height={603}
@@ -211,7 +211,7 @@ const FishProducts = () => {
                         </div>
                     </div>
                     <Image
-                        src="/images/SeaBassFillets.png"
+                        src="/images/fishImg/SeaBassFillets.png"
                         alt="Sea Bass Fillets"
                         width={603}
                         height={603}
@@ -277,7 +277,7 @@ const FishProducts = () => {
                             </div>
 
                             <Image
-                                src="/images/TurkishSomonFillets.png"
+                                src="/images/fishImg/TurkishSomonFillets.png"
                                 alt="Turkish Somon Fillets"
                                 width={603}
                                 height={603}
@@ -343,7 +343,7 @@ const FishProducts = () => {
                                 </div>
                             </div>
                             <Image
-                                src="/images/SterilizedStuffedMussel.png"
+                                src="/images/fishImg/SterilizedStuffedMussel.png"
                                 alt="Sterilized stuffed Mussel"
                                 width={603}
                                 height={603}

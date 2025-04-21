@@ -6,8 +6,7 @@ const About = () => (
     <div>
         <Head>
             <title>About Us</title>
-            <link rel="icon" href="/sunblu.ico"/>
-            <link rel="icon" href="/sunblu.ico"/>
+            <link rel="icon" href="/images/logo/sunblu.ico"/>
             <meta charSet="UTF-8"/>
             <meta name="keywords" content="ManavFood, Sunblu, Feray Manav"/>
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -55,7 +54,7 @@ const About = () => (
                     {/* Görsel */}
                     <div className="lg:w-1/2 rounded-3xl overflow-hidden">
                         <Image
-                            src="/images/quaility.png" // Kendi görsel yolunu kullan
+                            src="/images/aboutUs/quaility.png" // Kendi görsel yolunu kullan
                             alt="Tomatoes"
                             width={800}
                             height={500}
@@ -85,7 +84,7 @@ const About = () => (
                     {/* Görsel */}
                     <div className="lg:w-1/2 rounded-3xl overflow-hidden">
                         <Image
-                            src="/images/global.png" // görsel yolu (seninki farklıysa güncelle)
+                            src="/images/aboutUs/global.png" // görsel yolu (seninki farklıysa güncelle)
                             alt="Global World Map"
                             width={800}
                             height={500}
@@ -116,7 +115,7 @@ const About = () => (
                     {/* Görsel */}
                     <div className="lg:w-1/2 rounded-3xl overflow-hidden">
                         <Image
-                            src="/images/portfolio.png" // Görsel dosya adın buysa, aksi halde güncelle
+                            src="/images/aboutUs/portfolio.png" // Görsel dosya adın buysa, aksi halde güncelle
                             alt="Portfolio Image"
                             width={800}
                             height={500}
@@ -130,7 +129,7 @@ const About = () => (
                     {/* Görsel */}
                     <div className="lg:w-1/2 rounded-3xl overflow-hidden">
                         <Image
-                            src="/images/sustainability.png" // Görselin doğru yolunu buraya yaz
+                            src="/images/aboutUs/sustainability.png" // Görselin doğru yolunu buraya yaz
                             alt="Fish Sustainability"
                             width={800}
                             height={500}

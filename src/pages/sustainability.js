@@ -7,7 +7,7 @@ const Sustainability = () => {
         <div>
             <Head>
                 <title>Sustainability</title>
-                <link rel="icon" href="/sunblu.ico" />
+                <link rel="icon" href="/images/logo/sunblu.ico" />
                 <meta charSet="UTF-8" />
                 <meta name="keywords" content="ManavFood, Sunblu, Feray Manav" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,11 +35,11 @@ const Sustainability = () => {
                     <div className="px-4 py-8">
                         <h1 className="text-lg font-semibold mb-4">Certified by |</h1>
                         <div className="flex flex-wrap items-center justify-center gap-6">
-                            <Image src="/images/brc.png" alt="brc logo" width={100} height={100} />
-                            <Image src="/images/sedex.jpg" alt="sedex logo" width={100} height={100} />
-                            <Image src="/images/iso.jpeg" alt="iso logo" width={100} height={100} />
-                            <Image src="/images/ifs.png" alt="ifs logo" width={100} height={100} />
-                            <Image src="/images/golabalGap.jpg" alt="globalgap logo" width={100} height={100} />
+                            <Image src="/images/sustainability/brc.png" alt="brc logo" width={100} height={100} />
+                            <Image src="/images/sustainability/sedex.jpg" alt="sedex logo" width={100} height={100} />
+                            <Image src="/images/sustainability/iso.jpeg" alt="iso logo" width={100} height={100} />
+                            <Image src="/images/sustainability/ifs.png" alt="ifs logo" width={100} height={100} />
+                            <Image src="/images/sustainability/golabalGap.jpg" alt="globalgap logo" width={100} height={100} />
                         </div>
                     </div>
                 </div>
@@ -51,7 +51,7 @@ const Sustainability = () => {
                     {/* Card 1 - IFS */}
                     <div className="bg-white shadow-md rounded-2xl p-6">
                         <h4 className="text-xl font-semibold mb-4">IFS Food Standard</h4>
-                        <Image src="/images/ifs.png" alt="IFS Logo" width={80} height={80} className="mb-4"/>
+                        <Image src="/images/sustainability/ifs.png" alt="IFS Logo" width={80} height={80} className="mb-4"/>
                         <p className="text-sm text-gray-700">
                             Reviews food production processes to ensure quality, safety, authenticity, and compliance
                             with customer and legal requirements. Based on ISO 9001.
@@ -61,7 +61,7 @@ const Sustainability = () => {
                     {/* Card 2 - GLOBAL G.A.P */}
                     <div className="bg-white shadow-md rounded-2xl p-6">
                         <h4 className="text-xl font-semibold mb-4">Global Good Agricultural Practice (Global G.A.P)</h4>
-                        <Image src="/images/golabalGap.jpg" alt="GLOBALGAP Logo" width={80} height={80}
+                        <Image src="/images/sustainability/golabalGap.jpg" alt="GLOBALGAP Logo" width={80} height={80}
                                className="mb-4"/>
                         <p className="text-sm text-gray-700">
                             A certification ensuring sustainable, safe, and traceable agriculture and aquaculture
@@ -72,7 +72,7 @@ const Sustainability = () => {
                     {/* Card 3 - BRC */}
                     <div className="bg-white shadow-md rounded-2xl p-6">
                         <h4 className="text-xl font-semibold mb-4">BRC</h4>
-                        <Image src="/images/brc.png" alt="BRC Logo" width={80} height={80} className="mb-4"/>
+                        <Image src="/images/sustainability/brc.png" alt="BRC Logo" width={80} height={80} className="mb-4"/>
                         <p className="text-sm text-gray-700">
                             BRC Global Standard ensures food safety, quality, and operational criteria across the
                             supply chain. Recognized worldwide for compliance assurance.
@@ -85,7 +85,7 @@ const Sustainability = () => {
                     {/* Sedex */}
                     <div className="bg-white shadow-md rounded-2xl p-6 w-full max-w-sm">
                         <h4 className="text-xl font-semibold mb-4">Sedex</h4>
-                        <Image src="/images/sedex.jpg" alt="Sedex Logo" width={80} height={80}
+                        <Image src="/images/sustainability/sedex.jpg" alt="Sedex Logo" width={80} height={80}
                                className="mb-4 mx-auto"/>
                         <p className="text-sm text-gray-700">
                             A global platform that promotes responsible business practices, focusing on labor rights,
@@ -96,7 +96,7 @@ const Sustainability = () => {
                     {/* ISO 22000 */}
                     <div className="bg-white shadow-md rounded-2xl p-6 w-full max-w-sm">
                         <h4 className="text-xl font-semibold mb-4">ISO 22000</h4>
-                        <Image src="/images/iso.jpeg" alt="ISO Logo" width={80} height={80} className="mb-4 mx-auto"/>
+                        <Image src="/images/sustainability/iso.jpeg" alt="ISO Logo" width={80} height={80} className="mb-4 mx-auto"/>
                         <p className="text-sm text-gray-700">
                             International standard for food safety management systems. Ensures hazards are controlled
                             at every step of the supply chain.

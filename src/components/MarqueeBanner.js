@@ -20,7 +20,7 @@ export default function MarqueeBanner() {
                                 </span>
                                 {/* Logo araya */}
                                 <Image
-                                    src="/images/sunblu.png"
+                                    src="/images/logo/sunblu.png"
                                     alt="logo"
                                     width={50}
                                     height={50}

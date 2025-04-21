@@ -25,14 +25,15 @@ const Navbar = () => {
     return (
         <nav className="flex items-center justify-between text-black py-4 px-6">
             {/* Logo */}
-            <div className="mx-auto">
+            <div className="mx-auto w-[100px] h-[100px] sm:w-[150px] sm:h-[150px] md:w-[200px] md:h-[200px] lg:w-[250px] lg:h-[250px] relative">
+                <Link href="/homepage">
                 <Image
-                    className={`logo ${isContactPage ? "rounded-[16px]" : ""}`}
-                    src="/images/sunblu.png"
+                    className={`logo ${isContactPage ? "rounded-[16px]" : ""} object-contain`}
+                    src="/images/logo/sunblu.png"
                     alt="logo"
-                    width={250}
-                    height={250}
+                    fill
                 />
+                </Link>
             </div>
 
             {/* Menü Öğeleri */}
@@ -48,8 +49,13 @@ const Navbar = () => {
                 ))}
 
                 <Link href="/menu">
-                    <div className="bg-[#44AA00]  p-3 rounded-[16px] cursor-pointer">
-                        <GiHamburgerMenu size={30} color="#ffffff" />
+                    <div
+                        className="bg-[#44AA00] p-2 sm:p-3 md:p-4 rounded-[12px] sm:rounded-[16px] cursor-pointer w-[40px] h-[40px] sm:w-[48px] sm:h-[48px] md:w-[56px] md:h-[56px] flex items-center justify-center"
+                    >
+                        <GiHamburgerMenu
+                            size={20} // veya responsive olarak dinamik
+                            className="text-white w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] md:w-[28px] md:h-[28px]"
+                        />
                     </div>
                 </Link>
             </div>
