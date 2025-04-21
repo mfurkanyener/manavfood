@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import emailjs from '@emailjs/browser';
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
+import Link from "next/link";
 
 export default function ContactPage() {
     const [accepted, setAccepted] = useState(false);
@@ -78,9 +79,9 @@ export default function ContactPage() {
                             />
                             <Label htmlFor="privacy" className="text-sm text-black">
                                 I have read and accept the{" "}
-                                <a href="#" className="underline">
+                                <Link href="/privacy" className="underline">
                                     Privacy Policy.
-                                </a>
+                                </Link>
                             </Label>
                         </div>
 
@@ -113,10 +114,10 @@ export default function ContactPage() {
                             >
                                 <HiOutlineMail className="text-[#45BEE0] w-8 h-8 mx-auto"/>
                                 <p className="font-bold text-base">EMAIL</p>
-                                <p className="max-w-[210px] text-center text-sm leading-snug">MANAVFOOD DIŞ TİCARET A.Ş.</p>
+                                <p className="mt-5 max-w-[210px] text-center text-sm leading-snug">MANAVFOOD DIŞ TİCARET A.Ş.</p>
                                 <a
                                     href="mailto:feray@manavfood.com"
-                                    className="text-sm text-[#333] underline hover:text-[#45BEE0] transition"
+                                    className="mb-5 text-sm text-[#333] underline hover:text-[#45BEE0] transition"
                                 >
                                     feray@manavfood.com
                                 </a>
