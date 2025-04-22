@@ -18,7 +18,7 @@ const FishProducts = () => {
                 {/* Topographic background */}
                 <div className="absolute inset-0 -z-20">
                     <Image
-                        src="/images/topografivektor.png"
+                        src="/images/tpbg.png"
                         alt="topographic background"
                         fill
                         className="object-cover"

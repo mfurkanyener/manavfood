@@ -12,24 +12,42 @@ import Link from "next/link";
 
 export default function ContactPage() {
     const [accepted, setAccepted] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const formRef = useRef();
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm(
-            'service_d3fyw4n',
-            'template_yh0uwcn',
-            formRef.current,
-            'I7aisYlFWzMjQG89a'
-        )
+        const form = formRef.current;
+        const email = form.email.value.trim();
+        const fullName = form.fullName.value.trim();
+        const message = form.message.value.trim();
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!fullName || !message || !emailRegex.test(email)) {
+            alert("Please fill in all required fields with valid data.");
+            return;
+        }
+
+        setIsSubmitting(true);
+
+        emailjs
+            .sendForm(
+                'service_d3fyw4n',
+                'template_yh0uwcn',
+                formRef.current,
+                'I7aisYlFWzMjQG89a'
+            )
             .then(() => {
                 alert("Message sent successfully!");
-                formRef.current.reset(); // Formu sıfırla
+                form.reset();
                 setAccepted(false);
             })
             .catch(() => {
                 alert("Failed to send message.");
+            })
+            .finally(() => {
+                setIsSubmitting(false);
             });
     };
 
@@ -47,8 +65,8 @@ export default function ContactPage() {
             </div>
 
             {/* Heading */}
-            <div className="max-w-7xl mx-auto px-6 pt-20 pb-8 text-white">
-                <h2 className="text-4xl font-bold max-w-md leading-snug">
+            <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 pt-20 pb-8">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold max-w-md leading-snug text-white drop-shadow-lg">
                     We are here to help you find the perfect product to suit your needs.
                 </h2>
             </div>
@@ -62,14 +80,14 @@ export default function ContactPage() {
                 >
                     <div className="space-y-4">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <Input name="fullName" placeholder="Full Name" required />
-                            <Input name="email" type="email" placeholder="Email" required />
+                            <Input name="fullName" placeholder="Full Name" required/>
+                            <Input name="email" type="email" placeholder="Email" required/>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <Input name="telephone" placeholder="Telephone" />
-                            <Input name="subject" placeholder="Subject" />
+                            <Input name="telephone" placeholder="Telephone"/>
+                            <Input name="subject" placeholder="Subject"/>
                         </div>
-                        <Textarea name="message" placeholder="Message" className="h-32" required />
+                        <Textarea name="message" placeholder="Message" className="h-32" required/>
 
                         <div className="flex items-center space-x-2">
                             <Checkbox
@@ -87,43 +105,50 @@ export default function ContactPage() {
 
                         <Button
                             type="submit"
-                            disabled={!accepted}
-                            className="bg-sky-400 text-white mt-2"
+                            disabled={!accepted || isSubmitting}
+                            className={`bg-sky-400 text-white mt-2 transition-all ${
+                                isSubmitting ? "opacity-60 cursor-not-allowed" : ""
+                            }`}
                         >
-                            Submit
+                            {isSubmitting ? (
+                                <div className="flex items-center gap-2">
+                                    <span
+                                        className="animate-spin w-4 h-4 border-2 border-white border-t-transparent rounded-full"></span>
+                                    Sending...
+                                </div>
+                            ) : (
+                                "Submit"
+                            )}
                         </Button>
                     </div>
                 </form>
 
-                        {/* Address Section */}
-                        <div className="flex flex-col md:flex-row items-center justify-center gap-6 pt-6">
-                            {/* Address Card */}
-                            <div
-                                className="bg-white rounded-[48px] shadow-xl w-[210px] h-[210px] p-4 grid grid-rows-[48px_32px_1fr] items-center text-center"
-                            >
-                                <FaMapMarkerAlt className="text-[#45BEE0] w-8 h-8 mx-auto"/>
-                                <p className="font-bold text-base">ADDRESS</p>
-                                <p className="max-w-[210px] text-center text-sm leading-snug">
-                                    Adalet Mah. Manas Bul. No: 12/2 Center Office Bayraklı IZMIR TURKEY
-                                </p>
-                            </div>
-
-                            {/* Email Card */}
-                            <div
-                                className="bg-white rounded-[48px] shadow-xl w-[210px] h-[210px] p-4 grid grid-rows-[48px_32px_1fr] items-center text-center"
-                            >
-                                <HiOutlineMail className="text-[#45BEE0] w-8 h-8 mx-auto"/>
-                                <p className="font-bold text-base">EMAIL</p>
-                                <p className="mt-5 max-w-[210px] text-center text-sm leading-snug">MANAVFOOD DIŞ TİCARET A.Ş.</p>
-                                <a
-                                    href="mailto:feray@manavfood.com"
-                                    className="mb-5 text-sm text-[#333] underline hover:text-[#45BEE0] transition"
-                                >
-                                    feray@manavfood.com
-                                </a>
-                            </div>
-                        </div>
+                {/* Address Section */}
+                <div className="flex flex-col md:flex-row items-center justify-center gap-6 pt-6">
+                    {/* Address Card */}
+                    <div
+                        className="bg-white rounded-[48px] shadow-xl w-[260px] h-[260px] p-4 grid grid-rows-[48px_32px_1fr] items-center text-center">
+                        <FaMapMarkerAlt className="text-[#45BEE0] w-8 h-8 mx-auto"/>
+                        <p className="font-bold text-base">ADDRESS</p>
+                        <p className="mt-5 max-w-[260px] text-center text-sm leading-snug">MANAVFOOD DIŞ TİCARET
+                            A.Ş.</p>
+                        <p className="max-w-[260px] text-center text-sm leading-snug">
+                            Adalet Mah. Manas Bul. No: 12/2 Center Office Bayraklı IZMIR TURKEY
+                        </p>
                     </div>
+
+                    {/* Email Card */}
+                    <div
+                        className="bg-white rounded-[48px] shadow-xl w-[260px] h-[260px] p-4 grid grid-rows-[48px_32px_1fr] items-center text-center">
+                        <HiOutlineMail className="text-[#45BEE0] w-8 h-8 mx-auto"/>
+                        <p className="font-bold text-base">EMAIL</p>
+                        <a href="mailto:feray@manavfood.com"
+                           className="max-w-[260px] -mt-11 text-center text-sm leading-snug">
+                            feray@manavfood.com
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }

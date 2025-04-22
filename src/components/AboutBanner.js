@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import { Imprima } from "next/font/google";
 import Link from "next/link";
 
@@ -16,7 +15,7 @@ const About = () => {
             {/* Background image */}
             <Image
                 className="absolute inset-0 w-full h-full object-cover"
-                src="/images/topografivektor.png"
+                src="/images/tpbg.png"
                 alt="topografivektor"
                 width={3209}
                 height={50}
@@ -26,7 +25,7 @@ const About = () => {
             {/* Overlay content */}
             <div className="relative z-10 max-w-4xl mx-auto text-center">
                 <h1 className={`${imprima.className} text-xl md:text-2xl mb-2`}>manavfood</h1>
-                <h2 className="text-2xl md:text-4xl font-light text-black mb-6">
+                <h2 className="text-4xl md:text-5xl font-medium mb-4">
                     About <span className="text-green-600 font-bold">Us</span>
                 </h2>
                 <p className="text-sm md:text-base text-gray-800 leading-relaxed mb-10">
@@ -39,10 +38,11 @@ const About = () => {
                     infrastructure. Sustainability and innovation are at the center of all
                     our processes.
                 </p>
-                <Link href="/about">
-                    <Button className="bg-black text-white px-6 py-3 text-sm rounded-md hover:bg-gray-800">
-                        Learn More
-                    </Button>
+                <Link
+                    href="/about"
+                    className="inline-block bg-black text-white px-6 py-3 rounded-xl text-md hover:bg-gray-900 transition"
+                >
+                    Learn More
                 </Link>
             </div>
         </div>

@@ -9,7 +9,7 @@ const ProductsSection = () => {
 
             <div className="relative z-10 max-w-6xl mx-auto px-4">
                 {/* Başlık */}
-                <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12">
+                <h2 className="text-4xl md:text-5xl font-medium mb-4 text-center">
                     Our <span className="text-[rgb(var(--color-green))]">Products</span>
                 </h2>
 
@@ -58,7 +58,7 @@ const ProductsSection = () => {
                 <p className="text-center text-xl md:text-2xl font-medium leading-relaxed">
                     How about <span className="text-[rgb(var(--color-green))] font-semibold">discovering</span> the
                     products<br/>
-                    we’ve carefully selected just for you?
+                    we’ve carefully selected just for you
                 </p>
             </div>
         </section>
