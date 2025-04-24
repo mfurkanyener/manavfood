@@ -24,7 +24,7 @@ const Homepage = () => {
                 <link rel="canonical" href="https://manavfood.com/" />
             </Head>
 
-            <main className="bg-gray-50 min-h-screen">
+            <main className="pt-[250px] bg-gray-50 min-h-screen">
                 <Slidebar
                     title={t.slidebar.slide1Title}
                     subtitle={t.slidebar.slide1Subtitle}

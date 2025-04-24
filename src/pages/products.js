@@ -8,7 +8,7 @@ const Products = () => {
     const t = messages.homepage;
 
     return (
-        <div>
+        <div className="mt-[220px]">
             <Head>
                 <title>{t.productsSection.title}</title>
                 <link rel="icon" href="/images/sunblu.ico"/>

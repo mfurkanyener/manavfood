@@ -72,7 +72,7 @@ const en = {
         fishProducts: {
             titleGreen: "Fish",
             titleNormal: "Products",
-            intro: "Our seafood products are carefully prepared...",
+            intro: "Our seafood products are carefully prepared using the freshest fish sourced from the clean and rich waters of Turkey. Each product, from our tender sea bass fillets to our flavorful stuffed mussels, reflects the authentic taste of the Aegean and Mediterranean coasts. Processed and preserved with precision, our seafood maintains its natural texture, nutritional value, and taste without the need for artificial additives. These ready-to-eat options are ideal for quick meals, gourmet recipes, and professional kitchens alike. Whether grilled, baked, or enjoyed straight from the package, they offer a premium culinary experience. Hygiene, freshness, and quality are strictly upheld during every stage of production and packaging. Appreciated in international markets, our seafood stands out for its flavor, convenience, and reliability. With the assurance of Manav Foreign Trade A.S., we bring the taste of the sea to your table.",
             products: [
                 {
                     title: "Sea Bream Fillets",

@@ -2,8 +2,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import { useLanguage } from "@/context/LanguageContext"; // 🔄 Ekle
+import { useLanguage } from "@/context/LanguageContext";
 
 const Navbar = () => {
     const pathname = usePathname();
@@ -11,7 +12,20 @@ const Navbar = () => {
     const isMenuPage = pathname === "/menu";
 
     const { messages } = useLanguage();
-    const t = messages.navbar; // navbar için çeviriler burada
+    const t = messages.navbar;
+
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        if (isContactPage) return;
+
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 50);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [isContactPage]);
 
     const navLinks = [
         { name: t.homepage, href: "/homepage" },
@@ -25,63 +39,85 @@ const Navbar = () => {
     if (isMenuPage) return null;
 
     return (
-        <nav className="w-full max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-4">
-            {/* Logo */}
-            <div className="relative w-[100px] h-[100px] sm:w-[150px] sm:h-[150px] md:w-[200px] md:h-[200px] lg:w-[250px] lg:h-[250px]">
-                <Link href="/homepage">
-                    <Image
-                        className={`logo ${isContactPage ? "rounded-[16px]" : ""} object-contain`}
-                        src="/images/logo/sunblu.png"
-                        alt="logo"
-                        fill
-                    />
-                </Link>
-            </div>
-
-            {/* Menü Öğeleri */}
-            <div className="flex items-center gap-6">
-                {navLinks.map((link) => {
-                    const isActive = pathname === link.href;
-
-                    return (
-                        <Link
-                            key={link.name}
-                            href={link.href}
-                            className={`hidden lg:flex relative text-lg transition-colors duration-200
-                            ${isActive
-                                ? isContactPage
-                                    ? "text-white"
-                                    : "text-[#44AA00]"
-                                : isContactPage
-                                    ? "text-black hover:text-white"
-                                    : "text-black hover:text-[#44AA00]"
-                            }`}
-                        >
-                            <span
-                                className={`relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:transition-all after:duration-300 ${
-                                    isActive
-                                        ? isContactPage
-                                            ? "after:w-full after:bg-white"
-                                            : "after:w-full after:bg-[#44AA00]"
-                                        : "after:w-0 after:bg-[#44AA00] hover:after:w-full"
-                                }`}
-                            >
-                                {link.name}
-                            </span>
-                        </Link>
-                    );
-                })}
-                <LanguageSwitcher />
-
-                {/* Hamburger Menü Butonu */}
-                <Link href="/menu">
-                    <div className="bg-[#44AA00] p-2 sm:p-3 md:p-4 rounded-[12px] sm:rounded-[16px] cursor-pointer w-[40px] h-[40px] sm:w-[48px] sm:h-[48px] md:w-[56px] md:h-[56px] flex items-center justify-center">
-                        <GiHamburgerMenu
-                            size={20}
-                            className="text-white w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] md:w-[28px] md:h-[28px]"
+        <nav
+            className={`w-full z-50 transition-all duration-300 ${
+                isContactPage
+                    ? "relative py-4"
+                    : `fixed top-0 left-0 bg-white ${
+                        scrolled ? "shadow-md py-2" : "py-4"
+                    }`
+            }`}
+        >
+            <div className="w-full max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6">
+                {/* Logo */}
+                <div
+                    className={`relative transition-all duration-300 ${
+                        isContactPage
+                            ? "w-[250px] h-[250px] rounded-[24px] bg-white p-2 "
+                            : scrolled
+                                ? "w-[60px] h-[60px] sm:w-[80px] sm:h-[80px]"
+                                : "w-[100px] h-[100px] sm:w-[250px] sm:h-[250px]"
+                    }`}
+                >
+                    <Link href="/homepage">
+                        <Image
+                            className={`logo ${isContactPage ? "rounded-[16px]" : ""} object-contain`}
+                            src="/images/logo/sunblu.png"
+                            alt="logo"
+                            fill
                         />
+                    </Link>
+                </div>
+
+                {/* Menü ve Butonlar */}
+                <div className="flex items-center gap-6">
+                    {/* Navigation Links */}
+                    <div
+                        className={`hidden lg:flex items-center gap-6 transition-opacity duration-300 ${
+                            !isContactPage && scrolled ? "opacity-0 pointer-events-none" : "opacity-100"
+                        }`}
+                    >
+                        {navLinks.map((link) => {
+                            const isActive = pathname === link.href;
+                            return (
+                                <Link
+                                    key={link.name}
+                                    href={link.href}
+                                    className={`relative text-lg transition-colors duration-200 ${
+                                        isContactPage
+                                            ? "text-black"
+                                            : isActive
+                                                ? "text-[#44AA00]"
+                                                : "text-black hover:text-[#44AA00]"
+                                    }`}
+                                >
+                                    <span
+                                        className={`relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:transition-all after:duration-300 ${
+                                            isActive
+                                                ? isContactPage
+                                                    ? "after:w-full after:bg-black"
+                                                    : "after:w-full after:bg-[#44AA00]"
+                                                : "after:w-0 after:bg-[#44AA00] hover:after:w-full"
+                                        }`}
+                                    >
+                                        {link.name}
+                                    </span>
+                                </Link>
+                            );
+                        })}
                     </div>
-                </Link>
+
+                    {/* Language Switcher */}
+                    <LanguageSwitcher/>
+
+                    {/* Hamburger Menü */}
+                    <Link href="/menu">
+                        <div
+                            className={`${isContactPage ? "bg-[#44AA00] rounded-full" : "bg-[#44AA00] rounded-[16px]"} p-2 w-[48px] h-[48px] flex items-center justify-center`}>
+                            <GiHamburgerMenu className="text-white w-6 h-6"/>
+                        </div>
+                    </Link>
+                </div>
             </div>
         </nav>
     );

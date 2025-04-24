@@ -46,6 +46,9 @@ const Footer = () => {
                         <span>·</span>
                         <Link href="/terms" className="hover:underline">{t.terms}</Link>
                         <span className="block mt-2">© 2025</span>
+
+                        <Link href="https://www.linkedin.com/in/mfurkanyener" className="hover:underline block mt-2 font-semibold italic">Created by
+                            Furkan Yener</Link>
                     </div>
                 </div>
 
