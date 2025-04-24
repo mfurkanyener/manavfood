@@ -2,11 +2,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef, useLayoutEffect } from "react";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useLanguage } from "@/context/LanguageContext";
 
-const Navbar = () => {
+const Navbar = ({ setNavbarHeight }) => {
     const pathname = usePathname();
     const isContactPage = pathname === "/contact";
     const isMenuPage = pathname === "/menu";
@@ -15,6 +15,7 @@ const Navbar = () => {
     const t = messages.navbar;
 
     const [scrolled, setScrolled] = useState(false);
+    const navbarRef = useRef(null);
 
     useEffect(() => {
         if (isContactPage) return;
@@ -26,6 +27,12 @@ const Navbar = () => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, [isContactPage]);
+
+    useLayoutEffect(() => {
+        if (!isContactPage && navbarRef.current && setNavbarHeight) {
+            setNavbarHeight(navbarRef.current.offsetHeight);
+        }
+    }, [isContactPage, setNavbarHeight]);
 
     const navLinks = [
         { name: t.homepage, href: "/homepage" },
@@ -40,6 +47,7 @@ const Navbar = () => {
 
     return (
         <nav
+            ref={navbarRef}
             className={`w-full z-50 transition-all duration-300 ${
                 isContactPage
                     ? "relative py-4"
@@ -73,7 +81,7 @@ const Navbar = () => {
                 <div className="flex items-center gap-6">
                     {/* Navigation Links */}
                     <div
-                        className={`hidden lg:flex items-center gap-6 transition-opacity duration-300 ${
+                        className={`hidden xl:flex items-center gap-6 transition-opacity duration-300 ${
                             !isContactPage && scrolled ? "opacity-0 pointer-events-none" : "opacity-100"
                         }`}
                     >
@@ -85,23 +93,25 @@ const Navbar = () => {
                                     href={link.href}
                                     className={`relative text-lg transition-colors duration-200 ${
                                         isContactPage
-                                            ? "text-black"
+                                            ? isActive
+                                                ? "text-white"
+                                                : "text-black hover:text-white"
                                             : isActive
                                                 ? "text-[#44AA00]"
                                                 : "text-black hover:text-[#44AA00]"
                                     }`}
                                 >
-                                    <span
-                                        className={`relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:transition-all after:duration-300 ${
-                                            isActive
-                                                ? isContactPage
-                                                    ? "after:w-full after:bg-black"
-                                                    : "after:w-full after:bg-[#44AA00]"
-                                                : "after:w-0 after:bg-[#44AA00] hover:after:w-full"
-                                        }`}
-                                    >
-                                        {link.name}
-                                    </span>
+                                <span
+                                    className={`relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:transition-all after:duration-300 ${
+                                        isActive
+                                            ? isContactPage
+                                                ? "after:w-full after:bg-white"
+                                                : "after:w-full after:bg-[#44AA00]"
+                                            : "after:w-0 after:bg-[#44AA00] hover:after:w-full"
+                                    }`}
+                                >
+                                    {link.name}
+                                </span>
                                 </Link>
                             );
                         })}

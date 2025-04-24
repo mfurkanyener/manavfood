@@ -20,7 +20,7 @@ const Packaging = () => {
             </Head>
 
             {/* Üst Alan */}
-            <section className="pt-[280px] relative text-center overflow-hidden isolate">
+            <section className="relative text-center overflow-hidden isolate">
                 <div className="relative">
                     {/* Topografik Arkaplan */}
                     <div className="absolute inset-0 -z-20">

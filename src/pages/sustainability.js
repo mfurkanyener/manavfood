@@ -18,7 +18,7 @@ const Sustainability = () => {
             </Head>
 
             {/* Hero Section */}
-            <section className="pt-[300px] relative">
+            <section className="relative">
                 <div className="absolute inset-0 -z-20">
                     <Image
                         src="/images/tpBg.png"

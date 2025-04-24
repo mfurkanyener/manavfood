@@ -32,7 +32,7 @@ const FishProducts = () => {
     );
 
     return (
-        <div className="pt-[290px] relative w-full min-h-screen overflow-hidden">
+        <div className="relative w-full min-h-screen overflow-hidden">
             <Head>
                 <title>Fish Products</title>
                 <link rel="icon" href="/images/sunblu.ico"/>

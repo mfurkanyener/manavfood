@@ -15,7 +15,7 @@ const About = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Head>
 
-            <section className="pt-[280px] relative">
+            <section className="relative">
                 {/* Arka Plan */}
                 <div className="absolute inset-0 -z-20">
                     <Image

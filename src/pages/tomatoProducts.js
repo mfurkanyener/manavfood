@@ -5,7 +5,7 @@ export default function TomatoProducts() {
     const { messages } = useLanguage(); // 🌍 Dil dosyasından metin çekilir
     const t = messages.tomatoProducts;
     return (
-        <section className="pt-[290px]">
+        <section>
             {/* === Üst Kısım: Topografik arkaplan ve intro === */}
             <section className="relative pt-12 text-center overflow-hidden -z-30">
                 {/* Topografik Arkaplan */}

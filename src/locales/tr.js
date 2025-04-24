@@ -3,9 +3,9 @@ const tr = {
     homepage: {
         slidebar: {
             slide1Title: "Tüketime Hazır",
-            slide1Subtitle: "Deniz Ürünleri Çözümleri",
-            slide2Title: "Yiyecek Hizmeti",
-            slide2Subtitle: "ve Perakende Çözümleri",
+            slide1Subtitle: "Deniz Ürünleri",
+            slide2Title: "Toptan ve Perakende",
+            slide2Subtitle: "Domates Ürünleri",
             tomatoBtn: "Domates Ürünleri",
             seafoodBtn: "Deniz Ürünleri"
         },
@@ -241,7 +241,7 @@ const tr = {
         send: "Gönder",
         sending: "Gönderiliyor...",
         addressTitle: "ADRES",
-        company: "MANAVFOOD DIŞ TİCARET A.Ş.",
+        company: "MANAV DIŞ TİCARET A.Ş.",
         address: "Adalet Mah. Manas Bul. No: 12/2 Center Office Bayraklı İZMİR TÜRKİYE",
         emailTitle: "E-POSTA",
     },
@@ -254,7 +254,7 @@ const tr = {
         contact: "İletişim"
     },
     footer: {
-        company: "MANAVFOOD DIŞ TİCARET A.Ş.",
+        company: "MANAV DIŞ TİCARET A.Ş.",
         email: "E-POSTA",
         address: "ADRES",
         addressDetails: "Adalet Mahallesi Manas Bul. No: 12/2\nCenter Office Bayraklı IZMIR TURKEY",
