@@ -63,7 +63,7 @@ export default function TomatoProducts() {
                 {/* TomatoBG Arka Plan */}
                 <div className="absolute inset-0 z-10">
                     <Image
-                        src="/images/tomatoImg/tomatobg.png"
+                        src="/images/tomatoImg/tomatoBg.png"
                         alt="tomato background"
                         fill
                         className="object-cover z-30"

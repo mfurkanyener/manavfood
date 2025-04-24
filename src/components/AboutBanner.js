@@ -15,7 +15,7 @@ const AboutBanner = ({ brand, title, highlight, description, buttonText }) => {
             {/* Background image */}
             <Image
                 className="absolute inset-0 w-full h-full object-cover"
-                src="/images/tpbg.png"
+                src="/images/tpBg.png"
                 alt="topografivektor"
                 width={3209}
                 height={50}
