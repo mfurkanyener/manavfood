@@ -24,9 +24,10 @@ const tr = {
             description: "Sizin için özenle seçtiğimiz ürünleri keşfetmeye ne dersiniz"
         },
         contactBanner: {
-            title: "İletişime Geçin",
-            subtitle: "Size yardımcı olmaktan mutluluk duyarız.",
-            button: "Bize Ulaşın"
+            title: "Bizimle iletişime ",
+            titleGreen: "geçin",
+            subtitle: "ManavFood’un Akdeniz’in seçkin lezzetlerini sofranıza nasıl taşıyabileceğini keşfetmek için bize ulaşın.",
+            buttonText: "Bize yazın"
         }
     },
     about: {

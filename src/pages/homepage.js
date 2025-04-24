@@ -8,7 +8,7 @@ import { useLanguage } from "@/context/LanguageContext";
 
 const Homepage = () => {
     const { messages } = useLanguage();
-    const t = messages.homepage; // 👈 her şey buradan erişilecek
+    const t = messages.homepage;
 
     return (
         <div>

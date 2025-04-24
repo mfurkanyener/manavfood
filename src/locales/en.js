@@ -30,10 +30,11 @@ const en = {
                 "we’ve carefully selected just for you"
         },
         contactBanner: {
-            title: "İletişime Geçin",
-            subtitle: "Size yardımcı olmaktan mutluluk duyarız.",
-            button: "Bize Ulaşın"
-        }
+            title: "Get in touch",
+            titleGreen: "with us",
+            subtitle: "Reach out to explore how ManavFood can deliver premium Mediterranean flavors—right to your table.",
+            buttonText: "Contact Us"
+        },
     },
         about: {
             title: "About Us",
@@ -258,7 +259,7 @@ const en = {
         contact: "Contact Us"
     },
     footer: {
-        company: "MANAVFOOD Foreign Trade Inc.",
+        company: "MANAVFOOD DIŞ TİCARET A.Ş.",
         email: "EMAIL",
         address: "ADDRESS",
         addressDetails: "Adalet Mahallesi Manas Bul. No: 12/2\nCenter Office Bayraklı IZMIR TURKEY",

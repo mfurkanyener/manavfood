@@ -30,8 +30,8 @@ const Footer = () => {
 
                     <div className="flex items-baseline gap-2 mb-2">
                         <p className="min-w-[80px] font-semibold leading-none">{t.email}</p>
-                        <a href="mailto:feray@manavfood.com" className="text-white hover:underline leading-none">
-                            feray@manavfood.com
+                        <a href="mailto:ozden@manavfood.com" className="text-white hover:underline leading-none">
+                            ozden@manavfood.com
                         </a>
                     </div>
 

@@ -36,7 +36,7 @@ export default function ContactPage() {
 
         emailjs
             .sendForm(
-                'service_d3fyw4n',
+                'service_8rdzckj',
                 'template_yh0uwcn',
                 formRef.current,
                 'I7aisYlFWzMjQG89a'
@@ -143,9 +143,9 @@ export default function ContactPage() {
                         className="bg-white rounded-[48px] shadow-xl w-[260px] h-[260px] p-4 grid grid-rows-[48px_32px_1fr] items-center text-center">
                         <HiOutlineMail className="text-[#45BEE0] w-8 h-8 mx-auto"/>
                         <p className="font-bold text-base">{t.emailTitle}</p>
-                        <a href="mailto:feray@manavfood.com"
+                        <a href="mailto:ozden@manavfood.com"
                            className="max-w-[260px] -mt-11 text-center text-sm leading-snug">
-                            feray@manavfood.com
+                            ozden@manavfood.com
                         </a>
                     </div>
                 </div>
