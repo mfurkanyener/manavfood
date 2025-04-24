@@ -5,6 +5,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import { Manrope } from 'next/font/google';
 import { LanguageProvider } from "@/context/LanguageContext";
 import { usePathname } from "next/navigation";
+import Head from "next/head";
 
 const manrope = Manrope({
     subsets: ['latin'],
@@ -32,6 +33,48 @@ const Layout = ({ children }) => {
 
     return (
         <LanguageProvider>
+            <Head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "Organization",
+                            "name": "ManavFood",
+                            "url": "https://manavfood.com",
+                            "logo": "https://manavfood.com/images/logo/sunblu.png",
+                            "sameAs": [
+                                "https://www.linkedin.com/company/manavfood/",
+                                "https://www.instagram.com/manavfood/"
+                            ],
+                            "contactPoint": {
+                                "@type": "ContactPoint",
+                                "telephone": "+90-555-555-5555",
+                                "contactType": "Customer Support",
+                                "areaServed": "TR",
+                                "availableLanguage": ["English", "Turkish"]
+                            }
+                        })
+                    }}
+                />
+
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "WebSite",
+                            "url": "https://manavfood.com",
+                            "name": "ManavFood",
+                            "potentialAction": {
+                                "@type": "SearchAction",
+                                "target": "https://manavfood.com/search?q={search_term_string}",
+                                "query-input": "required name=search_term_string"
+                            }
+                        })
+                    }}
+                />
+            </Head>
             <main
                 className={manrope.className}
                 style={{ paddingTop: isExcludedPage ? undefined : navbarHeight }}
