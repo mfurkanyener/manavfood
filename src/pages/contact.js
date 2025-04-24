@@ -145,8 +145,7 @@ export default function ContactPage() {
                         <p className="font-bold text-base">{t.emailTitle}</p>
                         <a href="mailto:ozden@manavfood.com"
                            className="max-w-[260px] -mt-11 text-center text-sm leading-snug">
-                            ozden@manavfood.com
-                        </a>
+                            feray@manavfood.com                        </a>
                     </div>
                 </div>
             </div>

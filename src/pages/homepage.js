@@ -13,14 +13,15 @@ const Homepage = () => {
     return (
         <div>
             <Head>
-                <title>Manavfood</title>
-                <meta charSet="UTF-8"/>
-                <link rel="icon" href="/images/sunblu.ico"/>
-                <meta name="description" content="ManavFood"/>
-                <meta name="keywords" content="ManavFood, Sunblu, Feray Manav"/>
-                <meta name="author" content="Furkan Yener"/>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-                <link rel="canonical" href="https://manavfood.com/"/>
+                <title>Manavfood | Premium Kurutulmuş Gıda ve Deniz Ürünleri</title>
+                <meta charSet="UTF-8" />
+                <link rel="icon" href="/images/sunblu.ico" />
+
+                <meta name="description" content="Manavfood, Türkiye'nin önde gelen kurutulmuş domates, deniz ürünleri ve sürdürülebilir gıda çözümleri sunan ihracat markasıdır. Kalite ve doğallığın buluştuğu tatlar dünyasına hoş geldiniz." />
+                <meta name="keywords" content="Manavfood, Sunblu, Feray Manav, kurutulmuş domates, deniz ürünleri, sterilize midye, levrek fileto, çupra dolma, sürdürülebilir gıda, Türkiye gıda ihracatı" />
+                <meta name="author" content="Furkan Yener" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="canonical" href="https://manavfood.com/" />
             </Head>
 
             <main className="bg-gray-50 min-h-screen">

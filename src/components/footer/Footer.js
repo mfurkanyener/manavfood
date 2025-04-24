@@ -31,8 +31,7 @@ const Footer = () => {
                     <div className="flex items-baseline gap-2 mb-2">
                         <p className="min-w-[80px] font-semibold leading-none">{t.email}</p>
                         <a href="mailto:ozden@manavfood.com" className="text-white hover:underline leading-none">
-                            ozden@manavfood.com
-                        </a>
+                            feray@manavfood.com                         </a>
                     </div>
 
                     <div className="flex items-baseline gap-2 mb-4">

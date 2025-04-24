@@ -30,7 +30,7 @@ const en = {
                 "we’ve carefully selected just for you"
         },
         contactBanner: {
-            title: "Get in touch",
+            title: "Get in touch ",
             titleGreen: "with us",
             subtitle: "Reach out to explore how ManavFood can deliver premium Mediterranean flavors—right to your table.",
             buttonText: "Contact Us"
