@@ -11,7 +11,7 @@ export default function TomatoProducts() {
                 {/* Topografik Arkaplan */}
                 <div className="absolute inset-0 -z-20">
                     <Image
-                        src="/images/tpbg.png"
+                        src="/images/tpBg.png"
                         alt="topographic background"
                         fill
                         className="object-cover"
@@ -63,7 +63,7 @@ export default function TomatoProducts() {
                 {/* TomatoBG Arka Plan */}
                 <div className="absolute inset-0 z-10">
                     <Image
-                        src="/images/tomatoImg/tomatoBg.png"
+                        src="/images/tomatoImg/tomatobg.png"
                         alt="tomato background"
                         fill
                         className="object-cover z-30"
