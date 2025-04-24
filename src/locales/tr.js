@@ -90,6 +90,7 @@ const tr = {
         nutrition: "Besin Değerleri",
         per100g: "100 gr için",
         ingredients: "İçindekiler",
+        ingredientsDetail: "Midye (Çiftlik üretimi). Zeytinyağı, tuz ve karabiber.",
         preheating: "Isıtma Seçenekleri",
         storage: "Saklama Koşulları",
         options: ["Mikrodalga", "Poşet içinde haşlama", "Tavada"],

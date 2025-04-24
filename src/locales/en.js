@@ -96,6 +96,7 @@ const en = {
             ingredients: "Ingredients",
             preheating: "Pre-heating options",
             storage: "Storage Conditions",
+            ingredientsDetail: "Mussels (Farm raised). Olive oil, salt and pepper.",
             options: ["Microwawe", "Boil in bag", "Sauce pan"],
             storageConditions: [
                 "Fresh, room temperature, 6 month",

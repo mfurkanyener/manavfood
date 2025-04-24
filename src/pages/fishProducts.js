@@ -116,9 +116,9 @@ const FishProducts = () => {
 
                                     {/* Diğer bilgiler */}
                                     <div className="space-y-4">
-                                        <p><span className="font-semibold">{t.ingredients}:</span> Mussels (Farm
-                                            raised).
-                                            Olive oil, salt and pepper.</p>
+                                        <p><span className="font-semibold">{t.ingredients}:</span>{t.ingredientsDetail}
+                                        </p>
+
 
                                         <div>
                                             <h2 className="font-bold mb-1">{t.preheating}</h2>
@@ -161,9 +161,7 @@ const FishProducts = () => {
 
                                 {/* Diğer bilgiler */}
                                 <div className="space-y-4">
-                                    <p><span className="font-semibold">{t.ingredients}:</span> Mussels (Farm raised).
-                                        Olive oil, salt and pepper.</p>
-
+                                    <p><span className="font-semibold">{t.ingredients}:</span>{t.ingredientsDetail}</p>
                                     <div>
                                         <h2 className="font-bold mb-1">{t.preheating}</h2>
                                         <ul className="list-disc list-inside">
@@ -203,8 +201,8 @@ const FishProducts = () => {
 
                                 {/* Diğer bilgiler */}
                                 <div className="space-y-4">
-                                    <p><span className="font-semibold">{t.ingredients}:</span> Mussels (Farm raised).
-                                        Olive oil, salt and pepper.</p>
+                                    <p><span className="font-semibold">{t.ingredients}:</span>{t.ingredientsDetail}</p>
+
 
                                     <div>
                                         <h2 className="font-bold mb-1">{t.preheating}</h2>
@@ -252,8 +250,7 @@ const FishProducts = () => {
 
                                 {/* Diğer bilgiler */}
                                 <div className="space-y-4">
-                                    <p><span className="font-semibold">{t.ingredients}:</span> Mussels (Farm raised).
-                                        Olive oil, salt and pepper.</p>
+                                    <p><span className="font-semibold">{t.ingredients}:</span>{t.ingredientsDetail}</p>
 
                                     <div>
                                         <h2 className="font-bold mb-1">{t.preheating}</h2>
