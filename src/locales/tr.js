@@ -13,7 +13,7 @@ const tr = {
             brand: "manavfood",
             title: "Hakkımızda",
             highlight: "",
-            description: "Manav Dış Ticaret A.Ş., Türkiye'den dünyaya yüksek kaliteli ve sürdürülebilir gıda ürünleri ihraç eden lider bir firmadır...",
+            description: "Manav Dış Ticaret A.Ş., Türkiye'den dünyaya yüksek kaliteli ve sürdürülebilir gıda ürünleri ihraç eden lider bir şirkettir. Ürün gamımızda fırınlanmış yarı kurutulmuş domates, güneşte kurutulmuş domates, sterilize midye dolma ve tüketime hazır balık çeşitleri (çipura, levrek, Türk somonu) bulunmaktadır. Kaliteli hammadde, titiz üretim ve güçlü lojistik altyapımızla müşterilerimize güvenilir çözümler sunuyoruz. Sürdürülebilirlik ve inovasyon tüm süreçlerimizin merkezinde yer alıyor.",
             button: "Daha Fazla Bilgi"
         },
         marquee: {
