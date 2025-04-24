@@ -66,12 +66,12 @@ const tr = {
         }
     },
     fishProducts: {
-        titleGreen: "Balık",
+        titleGreen: "Deniz",
         titleNormal: "Ürünleri",
-        intro: "Deniz ürünlerimiz, Türkiye'nin temiz ve zengin sularından elde edilen en taze balıklar kullanılarak özenle hazırlanmaktadır. Yumuşacık levrek filetolarımızdan lezzetli midye dolmalarımıza kadar her ürünümüz Ege ve Akdeniz kıyılarının otantik lezzetini yansıtmaktadır. Hassasiyetle işlenen ve muhafaza edilen deniz ürünlerimiz, yapay katkı maddelerine ihtiyaç duymadan doğal dokusunu, besin değerini ve lezzetini korur. Bu yemeye hazır seçenekler hızlı yemekler, gurme tarifler ve profesyonel mutfaklar için idealdir. İster ızgarada, ister fırında, ister doğrudan paketinden çıkarılarak tüketilsin, birinci sınıf bir mutfak deneyimi sunarlar. Üretim ve paketlemenin her aşamasında hijyen, tazelik ve kalite titizlikle korunur. Uluslararası pazarlarda takdir edilen deniz ürünlerimiz lezzeti, rahatlığı ve güvenilirliği ile öne çıkmaktadır. Manav Dış Ticaret A.Ş. güvencesiyle denizin lezzetini sofranıza getiriyoruz.",
+        intro: "Deniz ürünlerimiz, Türkiye'nin temiz ve zengin sularından elde edilen en taze balık ve midyeler kullanılarak özenle hazırlanmaktadır. Yumuşacık levrek filetolarımızdan lezzetli midye dolmalarımıza kadar her ürünümüz Ege ve Akdeniz kıyılarının otantik lezzetini yansıtmaktadır. Hassasiyetle işlenen ve muhafaza edilen deniz ürünlerimiz, yapay katkı maddelerine ihtiyaç duymadan doğal dokusunu, besin değerini ve lezzetini korur. Bu yemeye hazır seçenekler hızlı yemekler, gurme tarifler ve profesyonel mutfaklar için idealdir. İster ızgarada, ister fırında, ister doğrudan paketinden çıkarılarak tüketilsin, birinci sınıf bir mutfak deneyimi sunarlar. Üretim ve paketlemenin her aşamasında hijyen, tazelik ve kalite titizlikle korunur. Uluslararası pazarlarda takdir edilen deniz ürünlerimiz lezzeti, rahatlığı ve güvenilirliği ile öne çıkmaktadır. Manav Dış Ticaret A.Ş. güvencesiyle denizin lezzetini sofranıza getiriyoruz.",
         products: [
             {
-                title: "Çupra Fileto",
+                title: "Çipura Fileto",
                 description: "Taze kültürlenmiş, %100 çiftlikte yetiştirilmiş levrek, çipura vb. kendi suyunda zeytinyağı tuz ve karabiber ile. Vakumlu kapalı pakette sterilize edilerek pişirilir. Onlara ilk dokunan siz olacaksınız."
             },
             {
