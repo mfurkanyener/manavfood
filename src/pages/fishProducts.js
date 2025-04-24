@@ -1,13 +1,41 @@
 import React from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
+import { useLanguage } from "@/context/LanguageContext";
 
 const FishProducts = () => {
+    const { messages } = useLanguage(); // 🌍 Dil dosyasından metin çekilir
+    const t = messages.fishProducts;
+    const NutritionTable = ({ per100gTitle, nutritionTitle }) => (
+        <div className="grid grid-cols-2 gap-1 mb-6">
+            <ul className="space-y-1">
+                <li className="font-bold text-base">{nutritionTitle}</li>
+                <li>Energy (kcal.)</li>
+                <li>Energy (kj.)</li>
+                <li>Fat (g.)</li>
+                <li>Saturated fat (g.)</li>
+                <li>Carbonhydrate (g.)</li>
+                <li>Sugar (g.)</li>
+                <li>Sodium (g.)</li>
+            </ul>
+            <ul className="space-y-1 text-right">
+                <li className="font-bold text-base">{per100gTitle}</li>
+                <li>168</li>
+                <li>707</li>
+                <li>7,5</li>
+                <li>3,3</li>
+                <li>16,6</li>
+                <li>0,7</li>
+                <li>1</li>
+            </ul>
+        </div>
+    );
+
     return (
         <div className="relative w-full min-h-screen overflow-hidden">
             <Head>
                 <title>Fish Products</title>
-                <link rel="icon" href="/images/logo/sunblu.ico"/>
+                <link rel="icon" href="/images/sunblu.ico"/>
                 <meta charSet="UTF-8"/>
                 <meta name="keywords" content="ManavFood, Sunblu, Feray Manav"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -45,21 +73,12 @@ const FishProducts = () => {
                 />
 
                 {/* Content */}
-                <div className="relative z-20 max-w-4xl mx-auto px-4 text-center pt-32 pb-28">
-                    <h2 className="text-2xl md:text-4xl font-light text-black mb-6">
-                        Fish <span className="text-green-600 font-bold">Products</span>
+                <div className="relative z-20 max-w-5xl mx-auto px-4 py-20">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                        {t.titleGreen} <span className="text-green-600 font-bold">{t.titleNormal}</span>
                     </h2>
                     <p className="text-sm md:text-base text-gray-800 leading-relaxed mb-10">
-                        Our seafood products are carefully prepared using the freshest fish sourced from the clean
-                        and rich waters of Turkey. Each product, from our tender sea bass fillets to our flavorful
-                        stuffed mussels, reflects the authentic taste of the Aegean and Mediterranean coasts. Processed
-                        and preserved with precision, our seafood maintains its natural texture, nutritional value, and
-                        taste without the need for artificial additives. These ready-to-eat options are ideal for quick
-                        meals, gourmet recipes, and professional kitchens alike. Whether grilled, baked, or enjoyed
-                        straight from the package, they offer a premium culinary experience. Hygiene, freshness, and
-                        quality are strictly upheld during every stage of production and packaging. Appreciated in
-                        international markets, our seafood stands out for its flavor, convenience, and reliability. With
-                        the assurance of Manav Foreign Trade A.S., we bring the taste of the sea to your table.
+                        {t.intro}
                     </p>
                 </div>
             </section>
@@ -78,65 +97,39 @@ const FishProducts = () => {
                 </div>
                     <div
                         className="relative z-10 flex flex-col items-center justify-center gap-20 px-4 py-32 max-w-7xl mx-auto">
-
                         {/* Product 1 */}
                         <div
                             className="flex flex-col lg:flex-row items-center justify-center gap-10 text-center lg:text-left">
                             <div className="max-w-md">
-                                <h3 className="text-xl font-semibold mb-4">Sea Bream Fillets</h3>
+                                <h3 className="text-xl font-semibold mb-4">{t.products[0].title}</h3>
                                 <p className="text-gray-800 text-sm leading-relaxed">
-                                    Fresh cultured, %100 farm raised sea bass, sea bream etc. in their own juices with
-                                    olive oil salt and pepper.
-                                    Sterilized cooked in vacuumed closed package.
-                                    You will the be the first to touch them.
+                                    {t.products[0].description}
                                 </p>
                                 <div
                                     className="text-black p-6 rounded-md max-w-3xl mx-auto text-sm">
 
                                     {/* İki sütunlu besin bilgileri */}
-                                    <div className="grid grid-cols-2 gap-1 mb-6">
-                                        <ul className="space-y-1">
-                                            <li className="font-bold text-base">Nutritional Information</li>
-                                            <li>Energy (kcal.)</li>
-                                            <li>Energy (kj.)</li>
-                                            <li>Fat (g.)</li>
-                                            <li>Saturated fat (g.)</li>
-                                            <li>Carbonhydrate (g.)</li>
-                                            <li>Sugar (g.)</li>
-                                            <li>Sodium (g.)</li>
-                                        </ul>
-                                        <ul className="space-y-1 text-right">
-                                            <li className="font-bold text-base">Per 100 g.</li>
-                                            <li>168</li>
-                                            <li>707</li>
-                                            <li>7,5</li>
-                                            <li>3,3</li>
-                                            <li>16,6</li>
-                                            <li>0,7</li>
-                                            <li>1</li>
-                                        </ul>
-                                    </div>
+                                    <NutritionTable
+                                        per100gTitle={t.per100g}
+                                        nutritionTitle={t.nutrition}
+                                    />
 
                                     {/* Diğer bilgiler */}
                                     <div className="space-y-4">
-                                        <p><span className="font-semibold">Ingredients:</span> Mussels (Farm raised).
+                                        <p><span className="font-semibold">{t.ingredients}:</span> Mussels (Farm raised).
                                             Olive oil, salt and pepper.</p>
 
                                         <div>
-                                            <h2 className="font-bold mb-1">Pre-heating options:</h2>
+                                            <h2 className="font-bold mb-1">{t.preheating}</h2>
                                             <ul className="list-disc list-inside">
-                                                <li>Microwawe</li>
-                                                <li>Boil in bag</li>
-                                                <li>Sauce pan</li>
+                                                {t.options.map((item, idx) => <li key={idx}>{item}</li>)}
                                             </ul>
                                         </div>
 
                                         <div>
-                                            <h2 className="font-bold mb-1">Storage Conditions:</h2>
+                                            <h2 className="font-bold mb-1">{t.storage}</h2>
                                             <ul className="list-disc list-inside">
-                                                <li>Fresh, room temperature, 6 month</li>
-                                                <li>Fresh, +4 degrees, 12 months</li>
-                                                <li>Frozen, 2 year</li>
+                                                {t.storageConditions.map((item, idx) => <li key={idx}>{item}</li>)}
                                             </ul>
                                         </div>
                                     </div>
@@ -155,57 +148,32 @@ const FishProducts = () => {
                 <div
                     className="flex flex-col lg:flex-row-reverse items-center justify-center gap-10 text-center lg:text-left">
                     <div className="max-w-md">
-                        <h3 className="text-xl font-semibold mb-4">Sea Bass Fillets</h3>
+                        <h3 className="text-xl font-semibold mb-4">{t.products[1].title}</h3>
                         <p className="text-gray-800 text-sm leading-relaxed">
-                            Our Sea Bass Fillets are delicately prepared from premium-quality fish caught in Turkey’s
-                            clean coastal waters, offering a light, refined flavor and tender texture. Packed with
-                            essential nutrients and ready to cook, they are perfect for healthy, gourmet meals at home
-                            or in restaurants.
+                            {t.products[1].description}
                         </p>
                         {/* İki sütunlu besin bilgileri */}
-                        <div className="grid grid-cols-2 gap-1 mb-6">
-                            <ul className="space-y-1">
-                                <li className="font-bold text-base">Nutritional Information</li>
-                                <li>Energy (kcal.)</li>
-                                <li>Energy (kj.)</li>
-                                <li>Fat (g.)</li>
-                                <li>Saturated fat (g.)</li>
-                                <li>Carbonhydrate (g.)</li>
-                                <li>Sugar (g.)</li>
-                                <li>Sodium (g.)</li>
-                            </ul>
-                            <ul className="space-y-1 text-right">
-                                <li className="font-bold text-base">Per 100 g.</li>
-                                <li>168</li>
-                                <li>707</li>
-                                <li>7,5</li>
-                                <li>3,3</li>
-                                <li>16,6</li>
-                                <li>0,7</li>
-                                <li>1</li>
-                            </ul>
-                        </div>
+                        <NutritionTable
+                            per100gTitle={t.per100g}
+                            nutritionTitle={t.nutrition}
+                        />
 
                         {/* Diğer bilgiler */}
                         <div className="space-y-4">
-                            <p><span className="font-semibold">Ingredients:</span> Mussels (Farm raised).
+                            <p><span className="font-semibold">{t.ingredients}:</span> Mussels (Farm raised).
                                 Olive oil, salt and pepper.</p>
 
                             <div>
-                                <h2 className="font-bold mb-1">Pre-heating options:</h2>
+                                <h2 className="font-bold mb-1">{t.preheating}</h2>
                                 <ul className="list-disc list-inside">
-                                    <li>Microwawe</li>
-                                    <li>Boil in bag</li>
-                                    <li>Sauce pan</li>
+                                    {t.options.map((item, idx) => <li key={idx}>{item}</li>)}
                                 </ul>
                             </div>
 
                             <div>
-                                <h2 className="font-bold mb-1">Storage Conditions:</h2>
+                                <h2 className="font-bold mb-1">{t.storage}</h2>
                                 <ul className="list-disc list-inside">
-                                    <li>Fresh, room temperature, 6 month</li>
-                                    <li>Fresh, +4 degrees, 12 months</li>
-                                    <li>Frozen, 2 year</li>
+                                    {t.storageConditions.map((item, idx) => <li key={idx}>{item}</li>)}
                                 </ul>
                             </div>
                         </div>
@@ -223,54 +191,31 @@ const FishProducts = () => {
                         <div
                             className="flex flex-col lg:flex-row items-center justify-center gap-10 text-center lg:text-left">
                             <div className="max-w-md">
-                                <h3 className="text-xl font-semibold mb-4">Turkish Somon Fillets</h3>
+                                <h3 className="text-xl font-semibold mb-4">{t.products[2].title}</h3>
                                 <p className="text-gray-800 text-sm leading-relaxed">
-                                    Our Turkish Salmon Fillets are sourced from carefully farmed salmon in Turkey, known for their rich flavor, vibrant color, and buttery texture. High in Omega-3 and protein, they are a nutritious, ready-to-cook choice for delicious and elegant seafood dishes.
-                                </p>
+                                    {t.products[2].description}                                </p>
                                 {/* İki sütunlu besin bilgileri */}
-                                <div className="grid grid-cols-2 gap-1 mb-6">
-                                    <ul className="space-y-1">
-                                        <li className="font-bold text-base">Nutritional Information</li>
-                                        <li>Energy (kcal.)</li>
-                                        <li>Energy (kj.)</li>
-                                        <li>Fat (g.)</li>
-                                        <li>Saturated fat (g.)</li>
-                                        <li>Carbonhydrate (g.)</li>
-                                        <li>Sugar (g.)</li>
-                                        <li>Sodium (g.)</li>
-                                    </ul>
-                                    <ul className="space-y-1 text-right">
-                                        <li className="font-bold text-base">Per 100 g.</li>
-                                        <li>168</li>
-                                        <li>707</li>
-                                        <li>7,5</li>
-                                        <li>3,3</li>
-                                        <li>16,6</li>
-                                        <li>0,7</li>
-                                        <li>1</li>
-                                    </ul>
-                                </div>
+                                <NutritionTable
+                                    per100gTitle={t.per100g}
+                                    nutritionTitle={t.nutrition}
+                                />
 
                                 {/* Diğer bilgiler */}
                                 <div className="space-y-4">
-                                    <p><span className="font-semibold">Ingredients:</span> Mussels (Farm raised).
+                                    <p><span className="font-semibold">{t.ingredients}:</span> Mussels (Farm raised).
                                         Olive oil, salt and pepper.</p>
 
                                     <div>
-                                        <h2 className="font-bold mb-1">Pre-heating options:</h2>
+                                        <h2 className="font-bold mb-1">{t.preheating}</h2>
                                         <ul className="list-disc list-inside">
-                                            <li>Microwawe</li>
-                                            <li>Boil in bag</li>
-                                            <li>Sauce pan</li>
+                                            {t.options.map((item, idx) => <li key={idx}>{item}</li>)}
                                         </ul>
                                     </div>
 
                                     <div>
-                                        <h2 className="font-bold mb-1">Storage Conditions:</h2>
+                                        <h2 className="font-bold mb-1">{t.storage}</h2>
                                         <ul className="list-disc list-inside">
-                                            <li>Fresh, room temperature, 6 month</li>
-                                            <li>Fresh, +4 degrees, 12 months</li>
-                                            <li>Frozen, 2 year</li>
+                                            {t.storageConditions.map((item, idx) => <li key={idx}>{item}</li>)}
                                         </ul>
                                     </div>
                                 </div>
@@ -285,63 +230,7 @@ const FishProducts = () => {
                             />
                         </div>
                         {/* Product 4 */}
-                        <div
-                            className="flex flex-col lg:flex-row items-center justify-center gap-10 text-center lg:text-left">
-                            <div className="max-w-md">
-                                <h3 className="text-xl font-semibold mb-4">Sterilized Stuffed Mussel</h3>
-                                <p className="text-gray-800 text-sm leading-relaxed">
-                                    Our Sterilized Stuffed Mussels are a traditional Turkish delicacy, made with tender
-                                    mussels filled with seasoned rice and aromatic spices. Conveniently ready-to-eat and
-                                    safely sterilized for long shelf life, they offer authentic flavor and premium
-                                    quality in every bite. </p>
-                                {/* İki sütunlu besin bilgileri */}
-                                <div className="grid grid-cols-2 gap-1 mb-6">
-                                    <ul className="space-y-1">
-                                        <li className="font-bold text-base">Nutritional Information</li>
-                                        <li>Energy (kcal.)</li>
-                                        <li>Energy (kj.)</li>
-                                        <li>Fat (g.)</li>
-                                        <li>Saturated fat (g.)</li>
-                                        <li>Carbonhydrate (g.)</li>
-                                        <li>Sugar (g.)</li>
-                                        <li>Sodium (g.)</li>
-                                    </ul>
-                                    <ul className="space-y-1 text-right">
-                                        <li className="font-bold text-base">Per 100 g.</li>
-                                        <li>120</li>
-                                        <li>502</li>
-                                        <li>4.1</li>
-                                        <li>3,2</li>
-                                        <li>16,6</li>
-                                        <li>0,3</li>
-                                        <li>0,2</li>
-                                    </ul>
-                                </div>
-
-                                {/* Diğer bilgiler */}
-                                <div className="space-y-4">
-                                    <p><span className="font-semibold">Ingredients:</span> Mussels (Farm raised).
-                                        Olive oil, salt and pepper.</p>
-
-                                    <div>
-                                        <h2 className="font-bold mb-1">Pre-heating options:</h2>
-                                        <ul className="list-disc list-inside">
-                                            <li>Microwawe</li>
-                                            <li>Boil in bag</li>
-                                            <li>Sauce pan</li>
-                                        </ul>
-                                    </div>
-
-                                    <div>
-                                        <h2 className="font-bold mb-1">Storage Conditions:</h2>
-                                        <ul className="list-disc list-inside">
-                                            <li>Fresh, room temperature, 6 month</li>
-                                            <li>Fresh, +4 degrees, 12 months</li>
-                                            <li>Frozen, 2 year</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                        <div className="flex flex-col lg:flex-row items-center justify-center gap-10 text-center lg:text-left">
                             <Image
                                 src="/images/fishImg/SterilizedStuffedMussel.png"
                                 alt="Sterilized stuffed Mussel"
@@ -349,7 +238,36 @@ const FishProducts = () => {
                                 height={603}
                                 className="rounded-md"
                             />
+                            <div className="max-w-md">
+                                <h3 className="text-xl font-semibold mb-4">{t.products[3].title}</h3>
+                                <p className="text-gray-800 text-sm leading-relaxed">
+                                    {t.products[3].description} </p>
+                                {/* İki sütunlu besin bilgileri */}
+                                <NutritionTable
+                                    per100gTitle={t.per100g}
+                                    nutritionTitle={t.nutrition}
+                                />
 
+                                {/* Diğer bilgiler */}
+                                <div className="space-y-4">
+                                    <p><span className="font-semibold">{t.ingredients}:</span> Mussels (Farm raised).
+                                        Olive oil, salt and pepper.</p>
+
+                                    <div>
+                                        <h2 className="font-bold mb-1">{t.preheating}</h2>
+                                        <ul className="list-disc list-inside">
+                                            {t.options.map((item, idx) => <li key={idx}>{item}</li>)}
+                                        </ul>
+                                    </div>
+
+                                    <div>
+                                        <h2 className="font-bold mb-1">{t.storage}</h2>
+                                        <ul className="list-disc list-inside">
+                                            {t.storageConditions.map((item, idx) => <li key={idx}>{item}</li>)}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
             </section>

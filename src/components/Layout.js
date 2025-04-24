@@ -1,27 +1,25 @@
 import React from 'react';
 import Navbar from './navbar/Navbar';
 import Footer from './footer/Footer';
-import { Manrope} from 'next/font/google'
 import ScrollToTop from "@/components/ScrollToTop";
+import { Manrope } from 'next/font/google';
+import { LanguageProvider } from "@/context/LanguageContext"; // ✅ ekle
 
-// If loading a variable font, you don't need to specify the font weight
 const manrope = Manrope({
     subsets: ['latin'],
     display: 'swap',
-})
+});
 
-
-const Layout = ({children}) => {
-
+const Layout = ({ children }) => {
     return (
-        <>
+        <LanguageProvider>
             <main className={manrope.className}>
-            <Navbar/>
-            {children}
-            <Footer/>
-            <ScrollToTop />
+                <Navbar />
+                {children}
+                <Footer />
+                <ScrollToTop />
             </main>
-        </>
+        </LanguageProvider>
     );
 };
 

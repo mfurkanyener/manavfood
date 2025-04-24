@@ -1,38 +1,55 @@
-import Head from 'next/head';
+import Head from "next/head";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function PrivacyPolicy() {
+    const { messages } = useLanguage();
+    const t = messages.privacy;
+
     return (
         <>
             <Head>
-                <title>Privacy Policy | Manavfood</title>
-                <meta name="description" content="Manavfood Dış Ticaret A.Ş. Privacy Policy" />
+                <title>{t.pageTitle}</title>
+                <meta name="description" content={t.pageDescription} />
             </Head>
             <main className="max-w-3xl mx-auto px-4 py-10 text-gray-800">
-                <h1 className="text-2xl font-bold mb-4">Privacy Policy</h1>
-                <p className="mb-4">
-                    At Manavfood Dış Ticaret A.Ş., we respect your privacy and are committed to protecting any personal information you provide to us through our website.
-                </p>
+                <h1 className="text-2xl font-bold mb-4">{t.title}</h1>
+                <p className="mb-4">{t.intro}</p>
 
-                <h2 className="text-xl font-semibold mt-6 mb-2">1. Information We Collect</h2>
-                <ul className="list-disc list-inside mb-4">
-                    <li>Name, email address, phone number (via contact form)</li>
-                    <li>Website usage data (anonymized)</li>
-                </ul>
+                <section className="space-y-6">
+                    <div>
+                        <h2 className="text-xl font-semibold mb-2">1. {t.collectTitle}</h2>
+                        <ul className="list-disc list-inside">
+                            {t.collectItems.map((item, index) => (
+                                <li key={index}>{item}</li>
+                            ))}
+                        </ul>
+                    </div>
 
-                <h2 className="text-xl font-semibold mt-6 mb-2">2. How We Use Your Information</h2>
-                <p className="mb-4">We use your data to respond to inquiries and improve user experience.</p>
+                    <div>
+                        <h2 className="text-xl font-semibold mt-6 mb-2">2. {t.usageTitle}</h2>
+                        <p>{t.usageContent}</p>
+                    </div>
 
-                <h2 className="text-xl font-semibold mt-6 mb-2">3. Data Protection</h2>
-                <p className="mb-4">We do not sell or share your data with third parties. All data is securely stored and accessible only by authorized personnel.</p>
+                    <div>
+                        <h2 className="text-xl font-semibold mt-6 mb-2">3. {t.protectionTitle}</h2>
+                        <p>{t.protectionContent}</p>
+                    </div>
 
-                <h2 className="text-xl font-semibold mt-6 mb-2">4. Cookies</h2>
-                <p className="mb-4">Basic cookies may be used. You may disable them via your browser settings.</p>
+                    <div>
+                        <h2 className="text-xl font-semibold mt-6 mb-2">4. {t.cookiesTitle}</h2>
+                        <p>{t.cookiesContent}</p>
+                    </div>
 
-                <h2 className="text-xl font-semibold mt-6 mb-2">5. Contact</h2>
-                <p>
-                    For any questions, contact us at:{" "}
-                    <a href="mailto:feray@manavfood.com" className="text-blue-600 underline">feray@manavfood.com</a>
-                </p>
+                    <div>
+                        <h2 className="text-xl font-semibold mt-6 mb-2">5. {t.contactTitle}</h2>
+                        <p>
+                            {t.contactContent}{" "}
+                            <a href="mailto:feray@manavfood.com" className="text-blue-600 underline">
+                                feray@manavfood.com
+                            </a>
+                        </p>
+                    </div>
+                </section>
             </main>
         </>
     );

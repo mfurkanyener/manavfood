@@ -1,3 +1,5 @@
+"use client";
+
 import {
     Carousel,
     CarouselContent,
@@ -10,18 +12,22 @@ import { Button } from "@/components/ui/button";
 import * as React from "react";
 import { CardContent } from "@/components/ui/card";
 import Link from "next/link";
+import { useLanguage } from "@/context/LanguageContext"; // ✅
 
 const Slidebar = () => {
+    const { messages } = useLanguage(); // ✅
+    const t = messages.homepage.slidebar; // ✅ yeni yapı
+
     const slides = [
         {
             image: "/images/slide/slide1.png",
-            title: "Ready To Eat",
-            subtitle: "Seafood Solutions",
+            title: t.slide1Title,
+            subtitle: t.slide1Subtitle,
         },
         {
             image: "/images/slide/slide2.png",
-            title: "Food Service",
-            subtitle: "and Retail Solutions",
+            title: t.slide2Title,
+            subtitle: t.slide2Subtitle,
         },
     ];
 
@@ -51,17 +57,17 @@ const Slidebar = () => {
                                                 </h2>
                                                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                                                     <Link href="/tomatoProducts">
-                                                    <Button
-                                                        variant="outline"
-                                                        className="text-white font-bold bg-black bg-opacity-50 px-5 py-3 rounded-lg hover:bg-opacity-70 transition"
-                                                    >
-                                                        Tomato Products
-                                                    </Button>
+                                                        <Button
+                                                            variant="outline"
+                                                            className="text-white font-bold bg-black bg-opacity-50 px-5 py-3 rounded-lg hover:bg-opacity-70 transition"
+                                                        >
+                                                            {t.tomatoBtn}
+                                                        </Button>
                                                     </Link>
                                                     <Link href="/fishProducts">
-                                                    <Button className="text-black font-bold bg-white px-5 py-3 rounded-lg hover:text-white hover:bg-black transition">
-                                                        Seafood Products
-                                                    </Button>
+                                                        <Button className="text-black font-bold bg-white px-5 py-3 rounded-lg hover:text-white hover:bg-black transition">
+                                                            {t.seafoodBtn}
+                                                        </Button>
                                                     </Link>
                                                 </div>
                                             </div>
@@ -73,7 +79,6 @@ const Slidebar = () => {
                     ))}
                 </CarouselContent>
 
-                {/* Custom Carousel Navigation Buttons */}
                 <CarouselPrevious className="size-10 sm:size-12 md:size-14 absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-200 transition" />
                 <CarouselNext className="size-10 sm:size-12 md:size-14 absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-200 transition" />
             </Carousel>
@@ -82,10 +87,3 @@ const Slidebar = () => {
 };
 
 export default Slidebar;
-
-
-
-
-
-
-

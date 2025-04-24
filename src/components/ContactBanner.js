@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const ContactBanner = () => {
+const ContactBanner = ({ title, subtitle, buttonText }) => {
     return (
         <section className="relative py-24 bg-white overflow-hidden">
             {/* Arka plan çizgileri */}
@@ -9,17 +9,17 @@ const ContactBanner = () => {
             {/* İçerik */}
             <div className="relative z-10 max-w-4xl mx-auto text-center px-4">
                 <h2 className="text-4xl md:text-5xl font-medium mb-4">
-                    Get in touch <span className="text-[rgb(var(--color-green))] font-semibold">with us</span>
+                    {title} <span className="text-[rgb(var(--color-green))] font-semibold">with us</span>
                 </h2>
                 <p className="text-md md:text-lg font-medium mb-8">
-                    Reach out to explore how ManavFood can deliver premium Mediterranean flavors—right to your table.
+                    {subtitle}
                 </p>
 
                 <Link
                     href="/contact"
                     className="inline-block bg-black text-white px-6 py-3 rounded-xl text-md hover:bg-gray-900 transition"
                 >
-                    Contact Us
+                    {buttonText}
                 </Link>
             </div>
         </section>

@@ -1,12 +1,9 @@
 import Image from 'next/image';
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function MarqueeBanner() {
-    const items = [
-        "Quick preparation",
-        "Low Costs",
-        "Fast Service",
-        "Premium Food"
-    ];
+    const { messages } = useLanguage(); // 🌍
+    const items = messages.homepage.marquee.items; // 🔁 Çok dilli içerik
 
     return (
         <div className="relative overflow-hidden bg-[#45BEE0] py-3">
@@ -18,13 +15,13 @@ export default function MarqueeBanner() {
                                 <span className="text-white font-semibold text-[36px] px-6">
                                     {text}
                                 </span>
-                                {/* Logo araya */}
                                 <Image
                                     src="/images/logo/sunblu.png"
                                     alt="logo"
                                     width={50}
                                     height={50}
-                                    className="mx-4 rounded-[10px]"                             />
+                                    className="mx-4 rounded-[10px]"
+                                />
                             </div>
                         ))}
                     </div>

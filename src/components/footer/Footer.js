@@ -1,12 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useLanguage } from "@/context/LanguageContext"; // 🌍 dil bağlamı
 
 const Footer = () => {
     const pathname = usePathname();
     const isMenuPage = pathname === "/menu";
     const isContactPage = pathname === "/contact";
     const isTomatoPage = pathname === "/tomatoProducts";
+
+    const { messages } = useLanguage(); // çeviri verisi
+    const t = messages.footer;
 
     if (isMenuPage || isContactPage) return null;
 
@@ -22,50 +26,49 @@ const Footer = () => {
                         height={100}
                         className="mb-4 rounded-xl"
                     />
-                    <p className="font-bold text-lg mb-4">MANAVFOOD DIŞ TİCARET A.Ş.</p>
+                    <p className="font-bold text-lg mb-4">{t.company}</p>
 
-                    <div className="flex items-start mb-2">
-                        <p className="w-20 font-semibold">E-MAIL</p>
-                        <a href="mailto:feray@manavfood.com" className="ml-4 text-white hover:underline block">
+                    <div className="flex items-baseline gap-2 mb-2">
+                        <p className="min-w-[80px] font-semibold leading-none">{t.email}</p>
+                        <a href="mailto:feray@manavfood.com" className="text-white hover:underline leading-none">
                             feray@manavfood.com
                         </a>
                     </div>
-                    <div className="flex items-start mb-4">
-                        <p className="w-20 font-semibold">ADDRESS</p>
-                        <p className="ml-4 text-sm leading-snug">
-                            Adalet Mahallesi Manas Bul. No: 12/2<br/>
-                            Center Office Bayraklı IZMIR TURKEY
+
+                    <div className="flex items-baseline gap-2 mb-4">
+                        <p className="min-w-[80px] font-semibold leading-none">{t.address}</p>
+                        <p className="text-sm text-white leading-snug">
+                            {t.addressDetails}
                         </p>
                     </div>
 
                     <div className="text-sm text-white mt-4 space-x-2">
-                        <Link href="/privacy" className="hover:underline">Privacy Policy</Link>
+                        <Link href="/privacy" className="hover:underline">{t.privacy}</Link>
                         <span>·</span>
-                        <Link href="/terms" className="hover:underline">Terms & Conditions</Link>
+                        <Link href="/terms" className="hover:underline">{t.terms}</Link>
                         <span className="block mt-2">© 2025</span>
                     </div>
                 </div>
 
-                {/* LİNKLER → MASAÜSTÜDE SAĞDA, MOBİLDE ÜSTTE */}
-
+                {/* Linkler */}
                 <div className="order-1 lg:order-2">
-                    <Link href="/products"><p className="font-semibold mb-2">Products</p></Link>
+                    <Link href="/products"><p className="font-semibold mb-2">{t.products}</p></Link>
                     <ul className="space-y-1 text-sm">
-                        <Link href="/tomatoProducts"><li>Tomato Products</li></Link>
-                        <Link href="/fishProducts"><li>Seafood Products</li></Link>
+                        <Link href="/tomatoProducts"><li>{t.tomato}</li></Link>
+                        <Link href="/fishProducts"><li>{t.seafood}</li></Link>
                     </ul>
                 </div>
 
                 <div className="order-2 lg:order-3">
-                    <Link href="/packaging"><p className="font-semibold mb-2">Packaging</p></Link>
+                    <Link href="/packaging"><p className="font-semibold mb-2">{t.packaging}</p></Link>
                 </div>
 
                 <div className="order-3 lg:order-4">
-                    <Link href="/sustainability"><p className="font-semibold mb-2">Sustainability</p></Link>
+                    <Link href="/sustainability"><p className="font-semibold mb-2">{t.sustainability}</p></Link>
                 </div>
 
                 <div className="order-4 lg:order-5">
-                    <Link href="/contact"><p className="font-semibold mb-2">Contact Us</p></Link>
+                    <Link href="/contact"><p className="font-semibold mb-2">{t.contact}</p></Link>
                 </div>
             </div>
         </footer>

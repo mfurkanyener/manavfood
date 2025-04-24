@@ -1,13 +1,19 @@
 import React from 'react';
 import Head from "next/head";
 import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext";
 
 const Packaging = () => {
+    const { messages } = useLanguage();
+    const t = messages.packaging;
+    const lists = messages?.readyLists || [];
+    const retailLists = messages?.retailLists || [];
+    const industralList = messages?.industrialLists || [];
     return (
         <div className="relative w-full min-h-screen overflow-hidden">
             <Head>
-                <title>Packaging</title>
-                <link rel="icon" href="/images/logo/sunblu.ico"/>
+                <title>{t.title}</title>
+                <link rel="icon" href="/images/sunblu.ico"/>
                 <meta charSet="UTF-8"/>
                 <meta name="keywords" content="ManavFood, Sunblu, Feray Manav"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -28,12 +34,10 @@ const Packaging = () => {
                     </div>
 
                     <div className="relative z-20 max-w-4xl mx-auto px-4 text-center pt-32 pb-28">
-                        <h3 className="text-2xl md:text-4xl text-green-600 font-bold mb-6">Packaging</h3>
-                        <h2 className="text-2xl md:text-4xl font-light text-black mb-6">
-                            Carefully Prepared for Quality and Trust
-                        </h2>
-                        <p className="text-sm md:text-base text-gray-800 leading-relaxed mb-10">
-                            Our packaging is designed to preserve quality, extend shelf life, and meet the demands of retail, industrial, and ready-to-eat markets with precision and care.                        </p>
+
+                        <h3 className="text-2xl md:text-4xl text-green-600 font-bold mb-6">{t.title}</h3>
+                        <h2 className="text-2xl md:text-4xl font-light text-black mb-6">{t.subtitle}</h2>
+                        <p className="text-sm md:text-base text-gray-800 leading-relaxed mb-10">{t.description}</p>
                     </div>
                 </div>
             </section>
@@ -52,13 +56,11 @@ const Packaging = () => {
                 <div
                     className="relative z-10 flex flex-col items-start justify-center gap-20 px-4 py-32 max-w-7xl mx-auto">
 
-                    {/* Başlık ve Açıklama */}
+                    {/* Ready to Eat */}
                     <div className="max-w-[1000px] text-left">
-                        <h3 className="text-xl font-semibold mb-4">Ready to Eat</h3>
-                        <p className="text-gray-800 text-sm leading-relaxed">
-                            Sauces for the ready-to-eat food sector are offered in A10 cans, fermented vegetables in A10
-                            cans, 3 lt pet jars and 18 kg buckets, and dried products in 1 kg, 5 kg and 5 lb vacuum
-                            packages.
+                        <h3 className="text-xl md:text-2xl font-semibold mb-4">{t.sections.readyTitle}</h3>
+                        <p className="text-gray-800 text-sm md:text-base leading-relaxed">
+                            {t.sections.readyDesc}
                         </p>
                     </div>
 
@@ -77,41 +79,25 @@ const Packaging = () => {
 
                         {/* Bilgiler */}
                         <div className="text-left text-gray-800 text-sm md:text-base leading-relaxed max-w-xl">
-                            <h3 className="font-semibold text-lg mb-2">Dried Products</h3>
+                            <h3 className="font-semibold text-lg mb-2">{t.sections.driedTitle}</h3>
 
-                            <p className="font-semibold">Sun Dried Tomatoes</p>
-                            <ul className="list-disc ml-6 mb-4">
-                                <li>Half – 5 kg vacuum bag / 5 lb vacuum bag / 1 kg vacuum bag</li>
-                                <li>Strip – 5 kg vacuum bag / 5 lb vacuum bag / 1 kg vacuum bag</li>
-                                <li>Cube – 5 kg vacuum bag / 5 lb vacuum bag / 1 kg vacuum bag</li>
-                                <li>Granule – 5 kg vacuum bag / 5 lb vacuum bag / 1 kg vacuum bag</li>
-                                <li>Flour – 5 kg vacuum bag / 5 lb vacuum bag / 1 kg vacuum bag</li>
-                            </ul>
-
-                            <p className="font-semibold">RTE Sun Dried Tomato</p>
-                            <ul className="list-disc ml-6 mb-4">
-                                <li>Half – 5 kg vacuum bag / 5 lb vacuum bag / 1 kg vacuum bag</li>
-                                <li>Strip – 5 kg vacuum bag / 5 lb vacuum bag / 1 kg vacuum bag</li>
-                                <li>Cube – 5 kg vacuum bag / 5 lb vacuum bag / 1 kg vacuum bag</li>
-                                <li>Pasteurized – 3000 cc jar / 2650 cc jar / 1000 cc jar</li>
-                            </ul>
-
-                            <p className="font-semibold">Semi-Dried Tomato</p>
-                            <ul className="list-disc ml-6">
-                                <li>Segment IQF – 5 kg vacuum bag / 5 lb vacuum bag / 1 kg vacuum bag</li>
-                                <li>Cube – 5 kg vacuum bag / 5 lb vacuum bag / 1 kg vacuum bag</li>
-                                <li>Cherry – 5 kg vacuum bag / 5 lb vacuum bag / 1 kg vacuum bag</li>
-                                <li>Marine – 5 kg vacuum bag / 5 lb vacuum bag / 1 kg vacuum bag</li>
-                                <li>Pasteurized – 1 kg bag / 1000 cc pet jar / 3000 cc jar / 2650 cc jar</li>
-                            </ul>
+                            {lists.map((list, idx) => (
+                                <div key={idx} className="mb-4">
+                                    <p className="font-semibold">{list.title}</p>
+                                    <ul className="list-disc ml-6">
+                                        {list.items.map((item, i) => (
+                                            <li key={i}>{item}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
                         </div>
                     </div>
-                    {/* Başlık ve Açıklama */}
+                    {/* Retail */}
                     <div className="max-w-[1000px] text-left">
-                        <h3 className="text-xl md:text-2xl font-semibold mb-4">Retail</h3>
+                        <h3 className="text-xl md:text-2xl font-semibold mb-4">{t.sections.retailTitle}</h3>
                         <p className="text-gray-800 text-sm md:text-base leading-relaxed">
-                            Sauces, fermented vegetables and roasted products are offered to the retail market in 720 cc,
-                            320 cc and 210 cc jars, dried products in 1 kg, 100 g and 500 g pouches.
+                            {t.sections.retailDesc}
                         </p>
                     </div>
 
@@ -120,33 +106,17 @@ const Packaging = () => {
 
                         {/* Liste */}
                         <div className="text-left text-gray-800 text-sm md:text-base leading-relaxed max-w-xl flex-1">
-                            <h3 className="font-semibold text-lg mb-2">Dried Products</h3>
-
-                            <p className="font-semibold">Sun Dried Products</p>
-                            <ul className="list-disc ml-6 mb-4">
-                                <li>Half – 1 kg pouch / 500 g pouch / 100 g pouch</li>
-                                <li>Strip – 1 kg pouch / 500 g pouch / 100 g pouch</li>
-                                <li>Cube – 1 kg pouch / 500 g pouch / 100 g pouch</li>
-                                <li>Granules – 1 kg pouch / 500 g pouch / 100 g pouch</li>
-                                <li>Flour – 1 kg pouch / 500 g pouch / 100 g pouch</li>
-                            </ul>
-
-                            <p className="font-semibold">RTE Sun Dried Products</p>
-                            <ul className="list-disc ml-6 mb-4">
-                                <li>Half – 1 kg pouch / 500 g pouch / 100 g pouch</li>
-                                <li>Strip – 1 kg pouch / 500 g pouch / 100 g pouch</li>
-                                <li>Cube – 1 kg pouch / 500 g pouch / 100 g pouch</li>
-                            </ul>
-
-                            <p className="font-semibold">Semi-Dried Products</p>
-                            <ul className="list-disc ml-6">
-                                <li>Segment IQF – 1 kg pouch / 500 g pouch / 100 g pouch</li>
-                                <li>Cube – 1 kg pouch / 500 g pouch / 100 g pouch</li>
-                                <li>Cherry – 1 kg pouch / 500 g pouch / 100 g pouch</li>
-                                <li>Marine – 1 kg pouch / 500 g pouch / 100 g pouch</li>
-                                <li>Pasteurized – 1 kg PE bag / 720 cc jar / 320 cc jar / 210 cc jar</li>
-                            </ul>
-                        </div>
+                            {retailLists.map((list, idx) => (
+                                <div key={idx} className="mb-6">
+                                    <p className="font-semibold">{list.title}</p>
+                                    <ul className="list-disc ml-6 mt-2">
+                                        {list.items.map((item, itemIdx) => (
+                                            <li key={itemIdx}>{item}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                            </div>
 
                         {/* Görsel */}
                         <div className="flex-shrink-0">
@@ -162,11 +132,11 @@ const Packaging = () => {
                     {/* Başlık ve Açıklama */}
                     <div className="max-w-[1000px] text-left">
                         <h3 className="text-xl md:text-2xl font-semibold mb-4">
-                            <span className="text-black">Industrial </span>
-                            <span className="text-green-600">Dried Products</span>
+                            <span className="text-black">{t.sections.industrialTitleBlack} </span>
+                            <span className="text-green-600">{t.sections.industrialTitleGreen}</span>
                         </h3>
                         <p className="text-gray-800 text-sm md:text-base leading-relaxed">
-                            We offer industrial dried products in bulk in 10 kg boxes, 5 kg and 5 lb vacuum bags in the following packages.
+                            {t.sections.industrialDesc}
                         </p>
                     </div>
 
@@ -186,34 +156,22 @@ const Packaging = () => {
 
                         {/* Liste */}
                         <div className="text-left text-gray-800 text-sm md:text-base leading-relaxed max-w-xl flex-1">
-                            <p className="font-semibold">Sun Dried Tomatoes</p>
-                            <ul className="list-disc ml-6 mb-4">
-                                <li>Half – 10 kg bulk / 5 kg vacuum bag / 5 lb vacuum bag</li>
-                                <li>Strip – 10 kg bulk / 5 kg vacuum bag / 5 lb vacuum bag</li>
-                                <li>Cube – 10 kg bulk / 5 kg vacuum bag / 5 lb vacuum bag</li>
-                                <li>Granular – 10 kg bulk / 5 kg vacuum bag / 5 lb vacuum bag</li>
-                                <li>Flour – 10 kg bulk / 5 kg vacuum bag / 5 lb vacuum bag</li>
-                            </ul>
-
-                            <p className="font-semibold">RTE Sun Dried Tomato</p>
-                            <ul className="list-disc ml-6 mb-4">
-                                <li>Half – 10 kg bulk / 5 kg vacuum bag / 5 lb vacuum bag</li>
-                                <li>Strip – 10 kg bulk / 5 kg vacuum bag / 5 lb vacuum bag</li>
-                                <li>Cube – 10 kg bulk / 5 kg vacuum bag / 5 lb vacuum bag</li>
-                            </ul>
-
-                            <p className="font-semibold">Oven Semi Dried Tomatoes</p>
-                            <ul className="list-disc ml-6">
-                                <li>Segment IQF – 10 kg bulk / 5 kg vacuum bag / 5 lb vacuum bag</li>
-                                <li>Cube – 10 kg bulk / 5 kg vacuum bag / 5 lb vacuum bag</li>
-                                <li>Cherry – 10 kg bulk / 5 kg vacuum bag / 5 lb vacuum bag</li>
-                            </ul>
+                            {industralList.map((list, idx) => (
+                                <div key={idx} className="mb-6">
+                                    <p className="font-semibold">{list.title}</p>
+                                    <ul className="list-disc ml-6 mt-2">
+                                        {list.items.map((item, itemIdx) => (
+                                            <li key={itemIdx}>{item}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
                         </div>
                     </div>
                     {/* Başlık */}
                     <div className="text-left">
                         <h2 className="text-2xl md:text-3xl font-semibold mb-6">
-                            Ready to Eat <span className="text-green-600">Mussels</span>
+                            {t.sections.readToEat}<span className="text-green-600">{t.sections.musselsTitle}</span>
                         </h2>
                     </div>
 
@@ -222,19 +180,19 @@ const Packaging = () => {
                         {/* Sol taraf - Bilgiler */}
                         <div className="text-gray-800 text-sm md:text-base leading-relaxed max-w-xl w-full">
                             <div className="flex mb-2">
-                                <p className="w-[150px] font-medium">Available box size:</p>
+                                <p className="w-[150px] font-medium">{t.sections.boxSize}</p>
                                 <p>10 × 1 package (25 pieces mussel, 450–550 gm.)</p>
                             </div>
                             <div className="flex mb-2">
-                                <p className="w-[150px] font-medium">Box size (mm.):</p>
+                                <p className="w-[150px] font-medium">{t.sections.boxDim}</p>
                                 <p>335 x 300 x 230 (5–6 kg.)</p>
                             </div>
                             <div className="flex mb-2">
-                                <p className="w-[150px] font-medium">Country of origin:</p>
+                                <p className="w-[150px] font-medium">{t.sections.origin}</p>
                                 <p>Türkiye</p>
                             </div>
                             <div className="flex">
-                                <p className="w-[150px] font-medium">Species:</p>
+                                <p className="w-[150px] font-medium">{t.sections.species}</p>
                                 <p>Mytilus Galloprovincialis</p>
                             </div>
                         </div>
@@ -244,8 +202,8 @@ const Packaging = () => {
                             <Image
                                 src="/images/packaging/mussels.png"
                                 alt="Blue Mussel Bag"
-                                width={240}
-                                height={300}
+                                width={500}
+                                height={500}
                                 className="rounded-lg"
                             />
                         </div>
@@ -253,40 +211,39 @@ const Packaging = () => {
                     {/* Başlık */}
                     <div className="text-left">
                         <h2 className="text-2xl md:text-3xl font-semibold mb-6">
-                            Ready to Eat <span className="text-green-600">Fish</span>
+                            {t.sections.readToEat}<span className="text-green-600">{t.sections.fishTitle}</span>
                         </h2>
                     </div>
 
                     {/* İçerik */}
                     <div className="flex flex-col lg:flex-row items-start justify-between w-full gap-12">
+                        <div className="flex gap-6 justify-center items-center">
+                            <Image
+                                src="/images/packaging/fish.png"
+                                alt="Blue Mussel Bag"
+                                width={500}
+                                height={500}
+                                className="rounded-lg"
+                            />
+                        </div>
                         {/* Sol taraf - Bilgiler */}
                         <div className="text-gray-800 text-sm md:text-base leading-relaxed max-w-xl w-full">
                             <div className="flex mb-2">
-                                <p className="w-[150px] font-medium">Available box size:</p>
+                                <p className="w-[150px] font-medium">{t.sections.boxSize}</p>
                                 <p>10 × 1 package (25 pieces mussel, 450–550 gm.)</p>
                             </div>
                             <div className="flex mb-2">
-                                <p className="w-[150px] font-medium">Box size (mm.):</p>
+                                <p className="w-[150px] font-medium">{t.sections.boxDim}</p>
                                 <p>335 x 300 x 230 (5–6 kg.)</p>
                             </div>
                             <div className="flex mb-2">
-                                <p className="w-[150px] font-medium">Country of origin:</p>
+                                <p className="w-[150px] font-medium">{t.sections.origin}</p>
                                 <p>Türkiye</p>
                             </div>
                             <div className="flex">
-                                <p className="w-[150px] font-medium">Species:</p>
+                                <p className="w-[150px] font-medium">{t.sections.species}</p>
                                 <p>Mytilus Galloprovincialis</p>
                             </div>
-                        </div>
-
-                        <div className="flex gap-6 justify-center items-center">
-                            <Image
-                                src="/images/packaging/mussels.png"
-                                alt="Blue Mussel Bag"
-                                width={240}
-                                height={300}
-                                className="rounded-lg"
-                            />
                         </div>
                     </div>
                 </div>

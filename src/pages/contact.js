@@ -9,11 +9,14 @@ import emailjs from '@emailjs/browser';
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import Link from "next/link";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function ContactPage() {
     const [accepted, setAccepted] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const formRef = useRef();
+    const { messages } = useLanguage();
+    const t = messages.contactPage;
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -67,7 +70,7 @@ export default function ContactPage() {
             {/* Heading */}
             <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 pt-20 pb-8">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold max-w-md leading-snug text-white drop-shadow-lg">
-                    We are here to help you find the perfect product to suit your needs.
+                    {t.heading}
                 </h2>
             </div>
 
@@ -80,14 +83,14 @@ export default function ContactPage() {
                 >
                     <div className="space-y-4">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <Input name="fullName" placeholder="Full Name" required/>
-                            <Input name="email" type="email" placeholder="Email" required/>
+                            <Input name="fullName" placeholder={t.fullName} required/>
+                            <Input name="email" type="email" placeholder={t.email} required/>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <Input name="telephone" placeholder="Telephone"/>
-                            <Input name="subject" placeholder="Subject"/>
+                            <Input name="telephone" placeholder={t.telephone}/>
+                            <Input name="subject" placeholder={t.subject}/>
                         </div>
-                        <Textarea name="message" placeholder="Message" className="h-32" required/>
+                        <Textarea name="message" placeholder={t.message} className="h-32" required/>
 
                         <div className="flex items-center space-x-2">
                             <Checkbox
@@ -96,9 +99,9 @@ export default function ContactPage() {
                                 onCheckedChange={() => setAccepted(!accepted)}
                             />
                             <Label htmlFor="privacy" className="text-sm text-black">
-                                I have read and accept the{" "}
+                                {t.privacyLabel}
                                 <Link href="/privacy" className="underline">
-                                    Privacy Policy.
+                                    {t.privacyPolicy}
                                 </Link>
                             </Label>
                         </div>
@@ -112,12 +115,11 @@ export default function ContactPage() {
                         >
                             {isSubmitting ? (
                                 <div className="flex items-center gap-2">
-                                    <span
-                                        className="animate-spin w-4 h-4 border-2 border-white border-t-transparent rounded-full"></span>
-                                    Sending...
+                                    <span className="animate-spin w-4 h-4 border-2 border-white border-t-transparent rounded-full"></span>
+                                    {t.sending}
                                 </div>
                             ) : (
-                                "Submit"
+                                t.send
                             )}
                         </Button>
                     </div>
@@ -129,11 +131,10 @@ export default function ContactPage() {
                     <div
                         className="bg-white rounded-[48px] shadow-xl w-[260px] h-[260px] p-4 grid grid-rows-[48px_32px_1fr] items-center text-center">
                         <FaMapMarkerAlt className="text-[#45BEE0] w-8 h-8 mx-auto"/>
-                        <p className="font-bold text-base">ADDRESS</p>
-                        <p className="mt-5 max-w-[260px] text-center text-sm leading-snug">MANAVFOOD DIŞ TİCARET
-                            A.Ş.</p>
+                        <p className="font-bold text-base">{t.addressTitle}</p>
+                        <p className="mt-5 max-w-[260px] text-center text-sm leading-snug">{t.company}</p>
                         <p className="max-w-[260px] text-center text-sm leading-snug">
-                            Adalet Mah. Manas Bul. No: 12/2 Center Office Bayraklı IZMIR TURKEY
+                            {t.address}
                         </p>
                     </div>
 
@@ -141,7 +142,7 @@ export default function ContactPage() {
                     <div
                         className="bg-white rounded-[48px] shadow-xl w-[260px] h-[260px] p-4 grid grid-rows-[48px_32px_1fr] items-center text-center">
                         <HiOutlineMail className="text-[#45BEE0] w-8 h-8 mx-auto"/>
-                        <p className="font-bold text-base">EMAIL</p>
+                        <p className="font-bold text-base">{t.emailTitle}</p>
                         <a href="mailto:feray@manavfood.com"
                            className="max-w-[260px] -mt-11 text-center text-sm leading-snug">
                             feray@manavfood.com

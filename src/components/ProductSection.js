@@ -1,16 +1,16 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import {Button} from "@/components/ui/button";
-import * as React from "react";
+import { Button } from "@/components/ui/button";
+import React from "react";
 
-const ProductsSection = () => {
+const ProductsSection = ({ title, description, tomatoBtn, seafoodBtn }) => {
     return (
         <section className="bg-gradient-to-b from-white to-blue-50 py-16 relative">
-
             <div className="relative z-10 max-w-6xl mx-auto px-4">
                 {/* Başlık */}
                 <h2 className="text-4xl md:text-5xl font-medium mb-4 text-center">
-                    Our <span className="text-[rgb(var(--color-green))]">Products</span>
+                    {title}
                 </h2>
 
                 {/* Ürün kartları */}
@@ -26,9 +26,8 @@ const ProductsSection = () => {
                         />
                         <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
                             <Link href="/tomatoProducts">
-                                <Button
-                                    className="text-black font-bold bg-white px-5 py-3 hover:text-white rounded-full hover:bg-black transition">
-                                    Tomato Products
+                                <Button className="text-black font-bold bg-white px-5 py-3 hover:text-white rounded-full hover:bg-black transition">
+                                    {tomatoBtn}
                                 </Button>
                             </Link>
                         </div>
@@ -45,9 +44,8 @@ const ProductsSection = () => {
                         />
                         <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
                             <Link href="/fishProducts">
-                                <Button
-                                    className="text-black font-bold bg-white px-5 py-3 hover:text-white rounded-full hover:bg-black transition">
-                                    Seafood Products
+                                <Button className="text-black font-bold bg-white px-5 py-3 hover:text-white rounded-full hover:bg-black transition">
+                                    {seafoodBtn}
                                 </Button>
                             </Link>
                         </div>
@@ -56,9 +54,7 @@ const ProductsSection = () => {
 
                 {/* Açıklama */}
                 <p className="text-center text-xl md:text-2xl font-medium leading-relaxed">
-                    How about <span className="text-[rgb(var(--color-green))] font-semibold">discovering</span> the
-                    products<br/>
-                    we’ve carefully selected just for you
+                    {description}
                 </p>
             </div>
         </section>

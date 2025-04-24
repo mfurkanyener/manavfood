@@ -1,6 +1,9 @@
 import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function TomatoProducts() {
+    const { messages } = useLanguage(); // 🌍 Dil dosyasından metin çekilir
+    const t = messages.tomatoProducts;
     return (
         <section>
             {/* === Üst Kısım: Topografik arkaplan ve intro === */}
@@ -37,11 +40,9 @@ export default function TomatoProducts() {
                 {/* İçerik */}
                 <div className="relative z-20 max-w-5xl mx-auto px-4 py-20">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                        <span className="text-green-600">Tomato</span> Products
+                        <span className="text-green-600">{t.titleGreen}</span> {t.titleNormal}
                     </h2>
-                    <p className="text-gray-700 max-w-2xl mx-auto mb-8">
-                        Our sun-dried tomatoes are made from the highest quality tomatoes carefully grown in Turkey’s fertile lands and naturally dried under the warm Mediterranean sun. With their rich flavor and intense aroma, they add a unique taste to a wide range of dishes. Processed using traditional methods without additives, our tomatoes retain their high nutritional value. They are perfect for salads, pizzas, pastas, and a variety of appetizers. Ideal for both home cooks and professional chefs, our products combine versatility with gourmet quality. Hygiene and freshness are prioritized during the packaging process.
-                    </p>
+                    <p className="text-gray-700 max-w-2xl mx-auto mb-8">{t.intro}</p>
 
                     {/* Alt Ortadaki İkon */}
                     <div className="absolute left-1/2 transform -translate-x-1/2 bottom-[-60px] z-10">
@@ -50,7 +51,7 @@ export default function TomatoProducts() {
                             alt="centeredTomatoIcon"
                             width={160}
                             height={160}
-                            className="w-[120px] md:w-[140px] lg:w-[160px] h-auto"
+                            className="hidden xl:block absolute w-[120px] md:w-[140px] lg:w-[160px] h-auto"
                         />
                     </div>
                 </div>
@@ -76,10 +77,8 @@ export default function TomatoProducts() {
                     {/* Product 1 */}
                     <div className="flex flex-col lg:flex-row items-center justify-center gap-10 text-center lg:text-left">
                         <div className="max-w-md">
-                            <h3 className="text-xl font-semibold mb-4">Oven Semi Dried Tomato</h3>
-                            <p className="text-gray-800 text-sm leading-relaxed">
-                                Grown in the fertile lands of the Aegean Region, our tomatoes are carefully selected and oven semi-dried to preserve their natural flavor and nutritional value. This method enhances their rich aroma, bringing a gourmet touch to any dish.
-                            </p>
+                            <h3 className="text-xl font-semibold mb-4">{t.product1.title}</h3>
+                            <p className="text-gray-800 text-sm leading-relaxed">{t.product1.desc}</p>
                         </div>
                         <Image
                             src="/images/tomatoImg/ovenSemiDiredPhoto.png"
@@ -93,10 +92,8 @@ export default function TomatoProducts() {
                     {/* Product 2 */}
                     <div className="flex flex-col lg:flex-row-reverse items-center justify-center gap-10 text-center lg:text-left">
                         <div className="max-w-md">
-                            <h3 className="text-xl font-semibold mb-4">Sun Dried Tomato</h3>
-                            <p className="text-gray-800 text-sm leading-relaxed">
-                                Our sun-dried tomatoes are prepared using traditional methods, preserving their natural richness and intense flavor. Free from additives and known for their bold aroma, they add a distinctive touch to salads, appetizers, and sauces.
-                            </p>
+                            <h3 className="text-xl font-semibold mb-4">{t.product2.title}</h3>
+                            <p className="text-gray-800 text-sm leading-relaxed">{t.product2.desc}</p>
                         </div>
                         <Image
                             src="/images/tomatoImg/sunDiredPhoto.png"
@@ -110,10 +107,8 @@ export default function TomatoProducts() {
                     {/* Product 3 */}
                     <div className="flex flex-col lg:flex-row items-center justify-center gap-10 text-center lg:text-left">
                         <div className="max-w-md">
-                            <h3 className="text-xl font-semibold mb-4">Organic Sun Dried Tomato</h3>
-                            <p className="text-gray-800 text-sm leading-relaxed">
-                                Our organically grown tomatoes are traditionally sun-dried, transforming into a completely natural and additive-free delicacy. With their high nutritional value and rich aroma, they bring both health and flavor to your table.
-                            </p>
+                            <h3 className="text-xl font-semibold mb-4">{t.product3.title}</h3>
+                            <p className="text-gray-800 text-sm leading-relaxed">{t.product3.desc}</p>
                         </div>
                         <Image
                             src="/images/tomatoImg/organicSunDiredPhoto.jpeg"

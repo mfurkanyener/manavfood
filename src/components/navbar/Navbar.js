@@ -2,20 +2,25 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Image from "next/image";
-
-const navLinks = [
-    { name: "Homepage", href: "/homepage" },
-    { name: "About Us", href: "/about" },
-    { name: "Products", href: "/products" },
-    { name: "Packaging", href: "/packaging" },
-    { name: "Sustainability", href: "/sustainability" },
-    { name: "Contact Us", href: "/contact" },
-];
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useLanguage } from "@/context/LanguageContext"; // 🔄 Ekle
 
 const Navbar = () => {
     const pathname = usePathname();
     const isContactPage = pathname === "/contact";
     const isMenuPage = pathname === "/menu";
+
+    const { messages } = useLanguage();
+    const t = messages.navbar; // navbar için çeviriler burada
+
+    const navLinks = [
+        { name: t.homepage, href: "/homepage" },
+        { name: t.about, href: "/about" },
+        { name: t.products, href: "/products" },
+        { name: t.packaging, href: "/packaging" },
+        { name: t.sustainability, href: "/sustainability" },
+        { name: t.contact, href: "/contact" },
+    ];
 
     if (isMenuPage) return null;
 
@@ -43,30 +48,30 @@ const Navbar = () => {
                             key={link.name}
                             href={link.href}
                             className={`hidden lg:flex relative text-lg transition-colors duration-200
-                ${
-                                isActive
-                                    ? isContactPage
-                                        ? "text-white"
-                                        : "text-[#44AA00]"
-                                    : isContactPage
-                                        ? "text-black hover:text-white"
-                                        : "text-black hover:text-[#44AA00]"
+                            ${isActive
+                                ? isContactPage
+                                    ? "text-white"
+                                    : "text-[#44AA00]"
+                                : isContactPage
+                                    ? "text-black hover:text-white"
+                                    : "text-black hover:text-[#44AA00]"
                             }`}
                         >
-              <span
-                  className={`relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:transition-all after:duration-300 ${
-                      isActive
-                          ? isContactPage
-                              ? "after:w-full after:bg-white"
-                              : "after:w-full after:bg-[#44AA00]"
-                          : "after:w-0 after:bg-[#44AA00] hover:after:w-full"
-                  }`}
-              >
-                {link.name}
-              </span>
+                            <span
+                                className={`relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:transition-all after:duration-300 ${
+                                    isActive
+                                        ? isContactPage
+                                            ? "after:w-full after:bg-white"
+                                            : "after:w-full after:bg-[#44AA00]"
+                                        : "after:w-0 after:bg-[#44AA00] hover:after:w-full"
+                                }`}
+                            >
+                                {link.name}
+                            </span>
                         </Link>
                     );
                 })}
+                <LanguageSwitcher />
 
                 {/* Hamburger Menü Butonu */}
                 <Link href="/menu">
