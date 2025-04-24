@@ -60,12 +60,10 @@ const Navbar = ({ setNavbarHeight }) => {
                 {/* Logo */}
                 <div
                     className={`relative transition-all duration-300 ${
-                        isContactPage
-                            ? "w-[250px] h-[250px] rounded-[24px] bg-white p-2 "
-                            : scrolled
-                                ? "w-[60px] h-[60px] sm:w-[80px] sm:h-[80px]"
-                                : "w-[100px] h-[100px] sm:w-[250px] sm:h-[250px]"
-                    }`}
+                        scrolled
+                            ? "w-[60px] h-[60px] sm:w-[80px] sm:h-[80px]"
+                            : "w-[100px] h-[100px] sm:w-[150px] sm:h-[150px] md:w-[200px] md:h-[200px] lg:w-[250px] lg:h-[250px]"
+                    } ${isContactPage ? "rounded-[24px] bg-white p-2" : ""}`}
                 >
                     <Link href="/homepage">
                         <Image

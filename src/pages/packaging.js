@@ -230,11 +230,11 @@ const Packaging = () => {
                         <div className="text-gray-800 text-sm md:text-base leading-relaxed max-w-xl w-full">
                             <div className="flex mb-2">
                                 <p className="w-[150px] font-medium">{t.sections.boxSize}</p>
-                                <p>10 × 1 package (25 pieces mussel, 450–550 gm.)</p>
+                                <p>10 × 1 package (2 pieces fillets, 150–200 gm.)</p>
                             </div>
                             <div className="flex mb-2">
                                 <p className="w-[150px] font-medium">{t.sections.boxDim}</p>
-                                <p>335 x 300 x 230 (5–6 kg.)</p>
+                                <p>{t.fishSize}</p>
                             </div>
                             <div className="flex mb-2">
                                 <p className="w-[150px] font-medium">{t.sections.origin}</p>
@@ -242,7 +242,7 @@ const Packaging = () => {
                             </div>
                             <div className="flex">
                                 <p className="w-[150px] font-medium">{t.sections.species}</p>
-                                <p>Mytilus Galloprovincialis</p>
+                                <p>Sparus aurata | Dicentrarchus labrax | Oncorhynchus mykisss</p>
                             </div>
                         </div>
                     </div>

@@ -9,9 +9,10 @@ const About = () => {
     return (
         <div>
             <Head>
-                <title>About</title>
+                <title>{t.pageTitle} | ManavFood - Sunblu</title>
                 <link rel="icon" href="/images/sunblu.ico" />
-                <meta name="keywords" content="ManavFood, Sunblu, Feray Manav" />
+                <meta name="description" content="Learn more about ManavFood, our mission in sustainable food trade, and the story behind Sunblu products from Turkey." />
+                <meta name="keywords" content="ManavFood, Sunblu, sustainable food, Turkish food export, dried tomatoes, seafood products, oven dried tomatoes, Feray Manav, organic food, food trade company, Turkish food company, Mediterranean food" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Head>
 

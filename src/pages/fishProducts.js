@@ -116,7 +116,7 @@ const FishProducts = () => {
 
                                     {/* Diğer bilgiler */}
                                     <div className="space-y-4">
-                                        <p><span className="font-semibold">{t.ingredients}:</span>{t.ingredientsDetail}
+                                        <p><span className="font-semibold">{t.ingredients}:</span>{t.products[0].ingredientsDetail}
                                         </p>
 
 
@@ -161,7 +161,7 @@ const FishProducts = () => {
 
                                 {/* Diğer bilgiler */}
                                 <div className="space-y-4">
-                                    <p><span className="font-semibold">{t.ingredients}:</span>{t.ingredientsDetail}</p>
+                                    <p><span className="font-semibold">{t.ingredients}:</span>{t.products[1].ingredientsDetail}</p>
                                     <div>
                                         <h2 className="font-bold mb-1">{t.preheating}</h2>
                                         <ul className="list-disc list-inside">
@@ -201,7 +201,7 @@ const FishProducts = () => {
 
                                 {/* Diğer bilgiler */}
                                 <div className="space-y-4">
-                                    <p><span className="font-semibold">{t.ingredients}:</span>{t.ingredientsDetail}</p>
+                                    <p><span className="font-semibold">{t.ingredients}:</span>{t.products[2].ingredientsDetail}</p>
 
 
                                     <div>
@@ -250,7 +250,7 @@ const FishProducts = () => {
 
                                 {/* Diğer bilgiler */}
                                 <div className="space-y-4">
-                                    <p><span className="font-semibold">{t.ingredients}:</span>{t.ingredientsDetail}</p>
+                                    <p><span className="font-semibold">{t.ingredients}:</span>{t.products[3].ingredientsDetail}</p>
 
                                     <div>
                                         <h2 className="font-bold mb-1">{t.preheating}</h2>

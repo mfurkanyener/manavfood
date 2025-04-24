@@ -13,7 +13,7 @@ const Homepage = () => {
     return (
         <div>
             <Head>
-                <title>Manavfood | Premium Kurutulmuş Gıda ve Deniz Ürünleri</title>
+                <title>{t.pageTitle}</title>
                 <meta charSet="UTF-8" />
                 <link rel="icon" href="/images/sunblu.ico" />
 

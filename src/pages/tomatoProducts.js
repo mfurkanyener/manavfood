@@ -1,11 +1,20 @@
+import Head from "next/head";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function TomatoProducts() {
-    const { messages } = useLanguage(); // 🌍 Dil dosyasından metin çekilir
+    const { messages } = useLanguage();
     const t = messages.tomatoProducts;
     return (
         <section>
+            <Head>
+                <title>{t.pageTitle || "Tomato Products"} | ManavFood - Sunblu</title>
+                <link rel="icon" href="/images/sunblu.ico" />
+                <meta charSet="UTF-8" />
+                <meta name="description" content={t.metaDescription || "Discover our selection of sun-dried, semi-dried, and organic tomatoes crafted under the Sunblu brand for global gourmet tastes."} />
+                <meta name="keywords" content="ManavFood, Sunblu, dried tomatoes, semi-dried tomatoes, organic tomatoes, Turkish tomato export, Mediterranean vegetables, oven dried, sun dried, tomato products" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            </Head>
             {/* === Üst Kısım: Topografik arkaplan ve intro === */}
             <section className="relative pt-12 text-center overflow-hidden -z-30">
                 {/* Topografik Arkaplan */}

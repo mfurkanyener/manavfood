@@ -1,5 +1,6 @@
 const en = {
     homepage: {
+        pageTitle: "Manavfood | Premium Dired Tomato and Seafoods",
         slidebar: {
 
             slide1Title: "Ready To Eat",
@@ -13,7 +14,7 @@ const en = {
             brand: "manavfood",
             title: "About",
             highlight: "Us",
-            description: "Manav Dış Ticaret A.Ş. is a leading company exporting high quality and sustainable food products from Turkey to the world...",
+            description: "Manav Dış Ticaret A.Ş. is a leading company exporting high quality and sustainable food products from Turkey to the world. Our product range includes baked semi-dried tomatoes, sun-dried tomatoes, sterilized stuffed mussels and ready-to-eat fish varieties (sea bream, sea bass, Turkish salmon). We offer reliable solutions to our customers with quality raw materials, meticulous production and strong logistics infrastructure. Sustainability and innovation are at the center of all our processes.",
             button: "Learn More"
         },
         marquee: {
@@ -37,6 +38,7 @@ const en = {
         },
     },
         about: {
+            pageTitle: "About Us",
             title: "About Us",
             who: "Who we are",
             welcome: "Welcome to Manav Dış Ticaret A.Ş. a renowned leader in the export of premium food products. With decades of experience the production in the global food trade, we are dedicated to bringing high-quality, authentic, and sustainable food products from Turkey to the world.",
@@ -77,18 +79,22 @@ const en = {
                 {
                     title: "Sea Bream Fillets",
                     description: "Fresh cultured, %100 farm raised sea bass, sea bream etc. in their own juices with olive oil salt and pepper. Sterilized cooked in vacuumed closed package. You will the be the first to touch them.",
+                    ingredientsDetail: "Sea Bream (Farm Produce). Olive oil, salt and pepper.",
                 },
                 {
                     title: "Sea Bass Fillets",
                     description: "Our Sea Bass Fillets are delicately prepared from premium-quality fish caught in Turkey’s clean coastal waters, offering a light, refined flavor and tender texture. Packed with essential nutrients and ready to cook, they are perfect for healthy, gourmet meals at home or in restaurants.",
+                    ingredientsDetail: "Sea Bass (Farm Produce). Olive oil, salt and pepper.",
                 },
                 {
                     title: "Turkish Somon Fillets",
                     description: "Our Turkish Salmon Fillets are sourced from carefully farmed salmon in Turkey, known for their rich flavor, vibrant color, and buttery texture. High in Omega-3 and protein, they are a nutritious, ready-to-cook choice for delicious and elegant seafood dishes.",
+                    ingredientsDetail: "Turkish Somon Fillet (Farm Produce). Olive oil, salt and pepper.",
                 },
                 {
                     title: "Sterilized Stuffed Mussel",
                     description: "Our Sterilized Stuffed Mussels are a traditional Turkish delicacy, made with tender mussels filled with seasoned rice and aromatic spices. Conveniently ready-to-eat and safely sterilized for long shelf life, they offer authentic flavor and premium quality in every bite.",
+                    ingredientsDetail: "Mussel (Farm Produce). Olive oil, salt and pepper.",
                 }
             ],
             nutrition: "Nutritional Information",
@@ -108,6 +114,7 @@ const en = {
         title: "Packaging",
         subtitle: "Carefully Prepared for Quality and Trust",
         description: "Our packaging is designed to preserve quality, extend shelf life, and meet the demands of retail, industrial, and ready-to-eat markets with precision and care.",
+        fishSize: "335 x 300 x 230 (1.5 - 2 kg.)",
         sections: {
             readyTitle: "Ready to Eat",
             readyDesc: "Sauces for the ready-to-eat food sector are offered in A10 cans, fermented vegetables in A10 cans, 3 lt pet jars and 18 kg buckets, and dried products in 1 kg, 5 kg and 5 lb vacuum packages.",
@@ -236,6 +243,7 @@ const en = {
         isoDesc: "International standard for food safety management systems. Ensures hazards are controlled at every step of the supply chain.",
     },
     contactPage: {
+        pageTitle: "Contact Us",
         heading: "We are here to help you find the perfect product to suit your needs.",
         fullName: "Full Name",
         email: "Email",
@@ -247,7 +255,7 @@ const en = {
         send: "Submit",
         sending: "Sending...",
         addressTitle: "ADDRESS",
-        company: "MANAVFOOD DIŞ TİCARET A.Ş.",
+        company: "MANAV DIŞ TİCARET A.Ş.",
         address: "Adalet Mah. Manas Bul. No: 12/2 Center Office Bayraklı IZMIR TURKEY",
         emailTitle: "EMAIL",
     },
@@ -260,7 +268,7 @@ const en = {
         contact: "Contact Us"
     },
     footer: {
-        company: "MANAVFOOD DIŞ TİCARET A.Ş.",
+        company: "MANAV DIŞ TİCARET A.Ş.",
         email: "EMAIL",
         address: "ADDRESS",
         addressDetails: "Adalet Mahallesi Manas Bul. No: 12/2\nCenter Office Bayraklı IZMIR TURKEY",

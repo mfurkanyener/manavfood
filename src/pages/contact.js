@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
@@ -56,6 +57,14 @@ export default function ContactPage() {
 
     return (
         <div className="relative min-h-screen overflow-hidden">
+            <Head>
+                <title>{t.pageTitle} | ManavFood - Sunblu</title>
+                <link rel="icon" href="/images/sunblu.ico" />
+                <meta charSet="UTF-8" />
+                <meta name="description" content={t.metaDescription || "Get in touch with ManavFood for premium sun-dried tomatoes, seafood, and export partnership inquiries."} />
+                <meta name="keywords" content="ManavFood, Sunblu, Contact, Feray Manav, Turkish food exporter, dried tomatoes, seafood, Mediterranean food, organic food, get in touch, export contact" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            </Head>
             {/* Background */}
             <div className="fixed top-0 left-0 w-full h-full -z-10">
                 <Image

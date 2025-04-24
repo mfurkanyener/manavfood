@@ -1,6 +1,7 @@
 // tr.js
 const tr = {
     homepage: {
+        pageTitle: "Manavfood | Premium Kurutulmuş Gıda ve Deniz Ürünleri",
         slidebar: {
             slide1Title: "Tüketime Hazır",
             slide1Subtitle: "Deniz Ürünleri",
@@ -31,6 +32,7 @@ const tr = {
         }
     },
     about: {
+        pageTitle: "Hakkımızda",
         title: "Hakkımızda",
         who: "Biz Kimiz",
         welcome: "Manav Dış Ticaret A.Ş.'ye hoş geldiniz. Premium gıda ürünlerinin ihracatında tanınmış bir lideriz. Küresel gıda ticaretinde onlarca yıllık deneyime sahip olarak, Türkiye'den dünyaya yüksek kaliteli, otantik ve sürdürülebilir gıda ürünleri sunmaya kendimizi adadık.",
@@ -72,25 +74,29 @@ const tr = {
         products: [
             {
                 title: "Çipura Fileto",
-                description: "Taze kültürlenmiş, %100 çiftlikte yetiştirilmiş levrek, çipura vb. kendi suyunda zeytinyağı tuz ve karabiber ile. Vakumlu kapalı pakette sterilize edilerek pişirilir. Onlara ilk dokunan siz olacaksınız."
+                description: "Taze kültürlenmiş, %100 çiftlikte yetiştirilmiş levrek, çipura vb. kendi suyunda zeytinyağı tuz ve karabiber ile. Vakumlu kapalı pakette sterilize edilerek pişirilir. Onlara ilk dokunan siz olacaksınız.",
+                ingredientsDetail: "Çipura (Çiftlik üretimi). Zeytinyağı, tuz ve karabiber.",
             },
             {
                 title: "Levrek Fileto",
-                description: "Türkiye'nin temiz kıyı sularında yakalanan üstün kaliteli balıklardan özenle hazırlanan Levrek Filetolarımız hafif, rafine bir lezzet ve yumuşak bir doku sunar. Temel besinlerle dolu ve pişirmeye hazır olan bu ürünler, evde veya restoranlarda sağlıklı, gurme yemekler için mükemmeldir."
+                description: "Türkiye'nin temiz kıyı sularında yakalanan üstün kaliteli balıklardan özenle hazırlanan Levrek Filetolarımız hafif, rafine bir lezzet ve yumuşak bir doku sunar. Temel besinlerle dolu ve pişirmeye hazır olan bu ürünler, evde veya restoranlarda sağlıklı, gurme yemekler için mükemmeldir.",
+                ingredientsDetail: "Levrek (Çiftlik üretimi). Zeytinyağı, tuz ve karabiber.",
             },
             {
                 title: "Türk Somon Fileto",
-                description: "Türk Somon Filetolarımız, zengin lezzeti, canlı rengi ve tereyağlı dokusuyla bilinen, Türkiye'de özenle yetiştirilen somonlardan elde edilmektedir. Omega-3 ve protein bakımından zengin olan bu ürünler, lezzetli ve şık deniz ürünleri yemekleri için besleyici, pişirmeye hazır bir seçimdir."
+                description: "Türk Somon Filetolarımız, zengin lezzeti, canlı rengi ve tereyağlı dokusuyla bilinen, Türkiye'de özenle yetiştirilen somonlardan elde edilmektedir. Omega-3 ve protein bakımından zengin olan bu ürünler, lezzetli ve şık deniz ürünleri yemekleri için besleyici, pişirmeye hazır bir seçimdir.",
+                ingredientsDetail: "Türk Somon (Çiftlik üretimi). Zeytinyağı, tuz ve karabiber.",
             },
             {
                 title: "Sterilize Midye Dolma",
-                description: "Türkiye'nin temiz kıyı sularında yakalanan üstün kaliteli balıklardan özenle hazırlanan Levrek Filetolarımız hafif, rafine bir lezzet ve yumuşak bir doku sunar. Temel besinlerle dolu ve pişirmeye hazır olan bu ürünler, evde veya restoranlarda sağlıklı, gurme yemekler için mükemmeldir."
+                description: "Sterilize Midye Dolmamız, baharatlı pirinç ve aromatik baharatlarla doldurulmuş yumuşak midyelerle yapılan geleneksel bir Türk lezzetidir. Yemeye hazır ve uzun raf ömrü için güvenli bir şekilde sterilize edilmiş olan bu midye dolmalar, her lokmada otantik lezzet ve üstün kalite sunar.",
+                ingredientsDetail: "Midye (Çiftlik üretimi). Zeytinyağı, tuz ve karabiber.",
+
             }
         ],
         nutrition: "Besin Değerleri",
         per100g: "100 gr için",
         ingredients: "İçindekiler",
-        ingredientsDetail: "Midye (Çiftlik üretimi). Zeytinyağı, tuz ve karabiber.",
         preheating: "Isıtma Seçenekleri",
         storage: "Saklama Koşulları",
         options: ["Mikrodalga", "Poşet içinde haşlama", "Tavada"],
@@ -104,6 +110,7 @@ const tr = {
         title: "Paketleme",
         subtitle: "Kalite ve Güven İçin Özenle Hazırlanmış",
         description: "Ambalajlarımız kaliteyi korumak, raf ömrünü uzatmak ve perakende, endüstriyel ve tüketime hazır pazarların taleplerini karşılamak için özenle tasarlanmıştır.",
+        fishSize: "335 x 300 x 230 (1.5 - 2 kg.)",
         sections: {
             readyTitle: "Tüketime Hazır",
             readyDesc: "Hazır gıda sektörüne yönelik soslar A10 kutularda, fermente sebzeler A10 kutularda, 3 lt'lik pet kavanozlarda ve 18 kg'lık kovalarda, kurutulmuş ürünler ise 1 kg, 5 kg ve 5 lb'lik vakumlu ambalajlarda sunulmaktadır.",
@@ -231,6 +238,7 @@ const tr = {
         isoDesc: "Gıda güvenliği yönetim sistemleri için uluslararası standart. Tehlikelerin tedarik zincirinin her aşamasında kontrol edilmesini sağlar.",
     },
     contactPage: {
+        pageTitle: "Bize Yazın",
         heading: "İhtiyacınıza uygun ürünü bulmanız için buradayız.",
         fullName: "Ad Soyad",
         email: "E-posta",

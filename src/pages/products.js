@@ -10,11 +10,12 @@ const Products = () => {
     return (
         <div>
             <Head>
-                <title>{t.productsSection.title}</title>
-                <link rel="icon" href="/images/sunblu.ico"/>
-                <meta charSet="UTF-8"/>
-                <meta name="keywords" content="ManavFood, Sunblu, Feray Manav"/>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                <title>{t.productsSection.title} | ManavFood - Sunblu</title>
+                <link rel="icon" href="/images/sunblu.ico" />
+                <meta charSet="UTF-8" />
+                <meta name="description" content="Explore premium quality products from ManavFood, including sun-dried tomatoes, oven semi-dried tomatoes, and ready-to-eat seafood options under the Sunblu brand." />
+                <meta name="keywords" content="ManavFood, Sunblu, Feray Manav, sun-dried tomatoes, semi-dried tomatoes, ready-to-eat seafood, Turkish food exporter, organic dried tomatoes, gourmet Mediterranean products, oven dried vegetables" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Head>
 
             <ProductsSection
